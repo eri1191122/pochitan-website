@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ポチ単 - 英検5級単語帳アプリ | 完全無料で579語を12種のゲームで学ぶ</title>
-    <meta name="description" content="英検5級の全579語を12種類のゲームで楽しく学べる完全無料iPhoneアプリ。広告なし・課金なし。シューティング、ブロック崩し、4択クイズなど飽きずに続けられる。保護者ダッシュボード付き。">
-    <meta name="keywords" content="英検5級,単語帳,英語学習,小学生,中学生,無料アプリ,英検対策,ポチ単,ゲーム学習,iPhone">
+    <meta name="description" content="英検5級の全579語を12種類のゲームで楽しく学べる完全無料iPhoneアプリ。広告なし・課金なし。小学生・中学生の英検対策に。保護者ダッシュボード付きで安心。">
+    <meta name="keywords" content="英検5級,単語帳,英語学習,小学生,中学生,無料アプリ,英検対策,ポチ単,ゲーム学習,iPhone,英検5級 アプリ,英検 単語">
     <meta name="author" content="Eri Ito">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#5D4E37">
 
     <!-- OGP -->
-    <meta property="og:title" content="ポチ単 - 英検5級単語帳アプリ">
+    <meta property="og:title" content="ポチ単 - 英検5級単語帳アプリ | 完全無料">
     <meta property="og:description" content="英検5級の全579語を12種類のゲームで楽しく学べる完全無料アプリ。広告なし・課金なし。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://eri1191122.github.io/pochitan-website/">
@@ -21,18 +21,17 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="ポチ単 - 英検5級単語帳アプリ">
+    <meta name="twitter:title" content="ポチ単 - 英検5級単語帳アプリ | 完全無料">
     <meta name="twitter:description" content="英検5級の全579語を12種類のゲームで楽しく学べる完全無料アプリ">
     <meta name="twitter:image" content="https://eri1191122.github.io/pochitan-website/images/app-icon.png">
 
-    <!-- Apple -->
+    <!-- Apple Smart Banner -->
     <meta name="apple-itunes-app" content="app-id=6757858287">
     <link rel="apple-touch-icon" href="images/app-icon.png">
-
     <link rel="icon" href="images/app-icon.png" type="image/png">
     <link rel="canonical" href="https://eri1191122.github.io/pochitan-website/">
 
-    <!-- JSON-LD Structured Data -->
+    <!-- JSON-LD -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -40,24 +39,12 @@
         "name": "ポチ単 英検五級単語帳",
         "operatingSystem": "iOS",
         "applicationCategory": "EducationalApplication",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "JPY"
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "ratingCount": "2"
-        },
-        "author": {
-            "@type": "Person",
-            "name": "Eri Ito"
-        },
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" },
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "ratingCount": "2" },
+        "author": { "@type": "Person", "name": "Eri Ito" },
         "description": "英検5級の全579語を12種類のゲームで楽しく学べる完全無料アプリ",
         "url": "https://eri1191122.github.io/pochitan-website/",
-        "downloadUrl": "https://apps.apple.com/app/id6757858287",
-        "screenshot": "https://eri1191122.github.io/pochitan-website/images/screenshot-home.png",
+        "downloadUrl": "https://apps.apple.com/jp/app/id6757858287",
         "softwareVersion": "1.0",
         "contentRating": "4+",
         "inLanguage": "ja"
@@ -65,1016 +52,437 @@
     </script>
 
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{
+            --bg:#FFF8F0;--cream:#FFF3E4;--peach:#FDEBD0;
+            --brown:#5D4E37;--orange:#E8A838;--green:#4CAF50;
+            --dark:#3C3226;--mid:#6B5D4F;--light:#9B8E80;
+            --card:#fff;--border:#EDE3D5;
+            --shadow:0 4px 24px rgba(93,78,55,.1);
+        }
+        body{font-family:-apple-system,BlinkMacSystemFont,'Hiragino Kaku Gothic ProN','Noto Sans JP','Segoe UI',sans-serif;background:var(--bg);color:var(--dark);line-height:1.75;overflow-x:hidden}
 
-        :root {
-            --bg-warm: #FFF8F0;
-            --bg-cream: #FFF3E4;
-            --bg-peach: #FDEBD0;
-            --primary-brown: #5D4E37;
-            --accent-orange: #E8A838;
-            --accent-green: #4CAF50;
-            --accent-red: #E57373;
-            --accent-blue: #64B5F6;
-            --text-dark: #3C3226;
-            --text-mid: #6B5D4F;
-            --text-light: #9B8E80;
-            --card-bg: #FFFFFF;
-            --card-shadow: 0 4px 24px rgba(93, 78, 55, 0.1);
-            --border-warm: #EDE3D5;
-        }
+        /* --- NAV --- */
+        nav{background:rgba(255,248,240,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+        .nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--brown);font-weight:700;font-size:16px}
+        .nav-brand img{width:34px;height:34px;border-radius:9px}
+        .nav-links{display:flex;gap:22px}
+        .nav-links a{color:var(--mid);text-decoration:none;font-size:14px;font-weight:500;transition:color .2s}
+        .nav-links a:hover,.nav-links a.active{color:var(--orange)}
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', Roboto, sans-serif;
-            background: var(--bg-warm);
-            color: var(--text-dark);
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
+        /* --- ANIMATIONS --- */
+        @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+        @keyframes floatSlow{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-10px) rotate(3deg)}}
+        @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+        @keyframes wiggle{0%,100%{transform:rotate(0)}25%{transform:rotate(-5deg)}75%{transform:rotate(5deg)}}
+        @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+        .anim{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+        .anim.v{opacity:1;transform:translateY(0)}
 
-        /* ===== NAV ===== */
-        nav {
-            background: rgba(255,248,240,0.92);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border-warm);
-            padding: 12px 24px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        .nav-brand {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            color: var(--primary-brown);
-            font-weight: 700;
-            font-size: 16px;
-        }
-        .nav-brand img { width: 34px; height: 34px; border-radius: 9px; }
-        .nav-links { display: flex; gap: 22px; }
-        .nav-links a {
-            color: var(--text-mid);
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-        .nav-links a:hover, .nav-links a.active { color: var(--accent-orange); }
+        /* --- HERO --- */
+        .hero{position:relative;background:linear-gradient(180deg,#FDEBD0 0%,#FFF3E4 55%,var(--bg) 100%);text-align:center;padding:56px 20px 64px;overflow:hidden;min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center}
+        .hero-char{position:absolute;pointer-events:none;z-index:1}
+        .h-dog{width:100px;left:5%;top:16%;animation:float 4s ease-in-out infinite}
+        .h-cat{width:85px;right:5%;top:20%;animation:floatSlow 5s ease-in-out infinite .5s}
+        .h-tanuki{width:80px;left:8%;bottom:10%;animation:float 4.5s ease-in-out infinite 1s}
+        .h-oni{width:70px;right:9%;bottom:14%;animation:wiggle 3s ease-in-out infinite;opacity:.65}
+        .hero-content{position:relative;z-index:2;max-width:600px}
+        .hero-icon{width:130px;height:130px;border-radius:30px;box-shadow:0 12px 40px rgba(232,168,56,.35);margin-bottom:20px;animation:pulse 3s ease-in-out infinite}
+        .hero-badges{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:14px}
+        .badge{display:inline-block;padding:5px 16px;border-radius:20px;font-size:13px;font-weight:600;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+        .badge-green{background:var(--green);color:#fff}
+        .badge-outline{background:transparent;border:1.5px solid var(--brown);color:var(--brown)}
+        .hero h1{font-size:48px;color:var(--brown);letter-spacing:3px;margin-bottom:2px}
+        .hero-sub{font-size:20px;color:var(--mid);font-weight:500;margin-bottom:8px}
+        .hero-catch{font-size:15px;color:var(--mid);margin-bottom:8px;font-weight:600}
+        .hero-desc{font-size:15px;color:var(--mid);max-width:500px;margin:0 auto 28px;line-height:1.9}
+        .dl-btn img{height:54px;transition:transform .2s}
+        .dl-btn img:hover{transform:scale(1.06)}
+        .hero-review{margin-top:16px;font-size:14px;color:var(--light)}
+        .stars{color:var(--orange);font-size:17px;letter-spacing:2px}
 
-        /* ===== ANIMATIONS ===== */
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-14px); }
-        }
-        @keyframes floatSlow {
-            0%, 100% { transform: translateY(0) rotate(-3deg); }
-            50% { transform: translateY(-10px) rotate(3deg); }
-        }
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
-        }
-        @keyframes wiggle {
-            0%, 100% { transform: rotate(0deg); }
-            25% { transform: rotate(-5deg); }
-            75% { transform: rotate(5deg); }
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes slideInLeft {
-            from { opacity: 0; transform: translateX(-40px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-        @keyframes slideInRight {
-            from { opacity: 0; transform: translateX(40px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-        @keyframes sparkle {
-            0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
-            50% { opacity: 1; transform: scale(1) rotate(180deg); }
-        }
+        /* --- SECTION UTILITY --- */
+        .sec-title{text-align:center;font-size:28px;color:var(--brown);margin-bottom:6px}
+        .sec-sub{text-align:center;font-size:14px;color:var(--light);margin-bottom:40px}
+        .sec-cta{text-align:center;margin-top:36px}
 
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.7s ease, transform 0.7s ease;
-        }
-        .animate-on-scroll.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        /* --- PROBLEM/SOLUTION --- */
+        .problem{padding:64px 20px;background:var(--cream)}
+        .problem-inner{max-width:760px;margin:0 auto}
+        .worry-list{display:flex;flex-direction:column;gap:14px;margin-bottom:32px}
+        .worry{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px 22px;font-size:15px;color:var(--dark);display:flex;align-items:center;gap:14px;box-shadow:0 2px 10px rgba(93,78,55,.04)}
+        .worry-icon{font-size:28px;flex-shrink:0}
+        .worry em{color:var(--orange);font-style:normal;font-weight:600}
+        .solution{text-align:center;margin-top:28px}
+        .solution-arrow{font-size:32px;color:var(--orange);margin-bottom:12px}
+        .solution h3{font-size:22px;color:var(--brown);margin-bottom:8px}
+        .solution p{font-size:15px;color:var(--mid);max-width:520px;margin:0 auto}
+        .solution-chars{display:flex;justify-content:center;gap:12px;margin-top:20px}
+        .solution-chars img{width:56px;animation:bounce 2s ease-in-out infinite}
+        .solution-chars img:nth-child(2){animation-delay:.25s}
+        .solution-chars img:nth-child(3){animation-delay:.5s}
 
-        /* ===== HERO ===== */
-        .hero {
-            position: relative;
-            background: linear-gradient(180deg, #FDEBD0 0%, #FFF3E4 50%, var(--bg-warm) 100%);
-            text-align: center;
-            padding: 50px 20px 60px;
-            overflow: hidden;
-            min-height: 90vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
+        /* --- STATS --- */
+        .stats{display:flex;justify-content:center;gap:12px;padding:40px 20px;max-width:740px;margin:0 auto;flex-wrap:wrap}
+        .stat{text-align:center;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px 20px;min-width:140px;flex:1;box-shadow:0 2px 12px rgba(93,78,55,.05);transition:transform .2s}
+        .stat:hover{transform:translateY(-3px)}
+        .stat-n{font-size:36px;font-weight:800;color:var(--orange)}
+        .stat-l{font-size:13px;color:var(--light);margin-top:2px}
 
-        /* Floating characters in hero */
-        .hero-char {
-            position: absolute;
-            pointer-events: none;
-            z-index: 1;
-        }
-        .hero-dog {
-            width: 100px;
-            left: 6%;
-            top: 18%;
-            animation: float 4s ease-in-out infinite;
-        }
-        .hero-cat {
-            width: 85px;
-            right: 6%;
-            top: 22%;
-            animation: floatSlow 5s ease-in-out infinite 0.5s;
-        }
-        .hero-tanuki {
-            width: 80px;
-            left: 10%;
-            bottom: 12%;
-            animation: float 4.5s ease-in-out infinite 1s;
-        }
-        .hero-oni {
-            width: 70px;
-            right: 10%;
-            bottom: 16%;
-            animation: wiggle 3s ease-in-out infinite;
-            opacity: 0.7;
-        }
-        .hero-castle {
-            position: absolute;
-            width: 90px;
-            right: 3%;
-            bottom: 40%;
-            opacity: 0.2;
-            z-index: 0;
-        }
+        /* --- SCREENSHOTS --- */
+        .ss-sec{padding:64px 0;background:var(--cream)}
+        .ss-scroll{display:flex;gap:24px;overflow-x:auto;padding:10px 40px 24px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+        .ss-scroll::-webkit-scrollbar{display:none}
+        .ss-item{flex:0 0 auto;scroll-snap-align:center;text-align:center;transition:transform .3s}
+        .ss-item:hover{transform:scale(1.03)}
+        .ss-item img{width:230px;border-radius:22px;box-shadow:0 10px 35px rgba(0,0,0,.13)}
+        .ss-cap{margin-top:12px;font-size:13px;color:var(--mid);font-weight:600}
 
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
+        /* --- FEATURES --- */
+        .feat-sec{padding:70px 20px;max-width:960px;margin:0 auto;position:relative}
+        .feat-deco{position:absolute;width:65px;opacity:.13;pointer-events:none}
+        .deco-tr{top:20px;right:0;animation:floatSlow 5s ease-in-out infinite}
+        .deco-bl{bottom:20px;left:0;animation:float 4s ease-in-out infinite}
+        .feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:20px}
+        .feat-card{background:var(--card);border-radius:18px;padding:30px 26px;box-shadow:var(--shadow);border:1px solid var(--border);transition:transform .25s,box-shadow .25s}
+        .feat-card:hover{transform:translateY(-5px);box-shadow:0 8px 30px rgba(93,78,55,.15)}
+        .feat-ico{font-size:38px;margin-bottom:12px}
+        .feat-card h3{font-size:17px;color:var(--brown);margin-bottom:8px}
+        .feat-card p{font-size:14px;color:var(--mid);line-height:1.8}
 
-        .hero-icon {
-            width: 130px;
-            height: 130px;
-            border-radius: 30px;
-            box-shadow: 0 12px 40px rgba(232, 168, 56, 0.35);
-            margin-bottom: 20px;
-            animation: pulse 3s ease-in-out infinite;
-        }
+        /* --- GAMES --- */
+        .games-sec{padding:70px 20px;background:linear-gradient(180deg,var(--cream) 0%,#FDE8C8 50%,var(--cream) 100%);overflow:hidden}
+        .games-inner{max-width:840px;margin:0 auto}
+        .battle{display:flex;justify-content:center;align-items:flex-end;gap:16px;margin-bottom:40px;flex-wrap:wrap}
+        .b-char{text-align:center}
+        .b-char img{width:76px;filter:drop-shadow(0 4px 8px rgba(0,0,0,.12))}
+        .b-char.ally img{animation:bounce 2s ease-in-out infinite}
+        .b-char.enemy img{animation:wiggle 2.5s ease-in-out infinite}
+        .b-vs{font-size:28px;font-weight:800;color:var(--orange);align-self:center;text-shadow:0 2px 4px rgba(0,0,0,.08)}
+        .b-label{font-size:11px;color:var(--light);margin-top:5px}
+        .g-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:14px}
+        .g-tag{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;text-align:center;font-size:14px;color:var(--brown);font-weight:600;box-shadow:0 3px 10px rgba(93,78,55,.05);transition:transform .25s,box-shadow .25s;cursor:default}
+        .g-tag:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(93,78,55,.12)}
+        .g-emoji{display:block;font-size:28px;margin-bottom:5px}
+        .g-desc{font-size:11px;color:var(--light);font-weight:400;margin-top:3px}
 
-        .hero-badge {
-            display: inline-block;
-            background: var(--accent-green);
-            color: white;
-            padding: 6px 20px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 14px;
-            box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
-        }
+        /* --- EXPLANATION --- */
+        .exp-sec{padding:70px 20px;max-width:900px;margin:0 auto}
+        .exp-wrap{display:flex;align-items:center;gap:44px;flex-wrap:wrap;justify-content:center}
+        .exp-wrap img{width:220px;border-radius:22px;box-shadow:0 10px 35px rgba(0,0,0,.13)}
+        .exp-text{flex:1;min-width:300px}
+        .exp-text h3{font-size:24px;color:var(--brown);margin-bottom:14px;line-height:1.5}
+        .exp-text p{font-size:15px;color:var(--mid);line-height:1.9;margin-bottom:16px}
+        .exp-tags{display:flex;flex-wrap:wrap;gap:8px}
+        .exp-tags span{background:var(--cream);color:var(--brown);padding:6px 14px;border-radius:20px;font-size:13px;font-weight:500;border:1px solid var(--border)}
 
-        .hero h1 {
-            font-size: 48px;
-            color: var(--primary-brown);
-            letter-spacing: 3px;
-            margin-bottom: 4px;
-        }
+        /* --- PARENT --- */
+        .parent-sec{padding:70px 20px;background:var(--cream)}
+        .parent-inner{max-width:880px;margin:0 auto}
+        .parent-wrap{display:flex;align-items:center;gap:44px;flex-wrap:wrap;justify-content:center}
+        .parent-wrap>img{width:210px;border-radius:22px;box-shadow:0 10px 35px rgba(0,0,0,.13)}
+        .parent-text{flex:1;min-width:300px}
+        .parent-text h3{font-size:22px;color:var(--brown);margin-bottom:14px;line-height:1.5}
+        .parent-text p{font-size:15px;color:var(--mid);line-height:1.9;margin-bottom:16px}
+        .safety{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+        .safety-item{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:13px 14px;display:flex;align-items:center;gap:10px;font-size:14px;color:var(--dark);font-weight:500}
+        .s-ico{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+        .s-green{background:#E8F5E9}.s-blue{background:#E3F2FD}.s-ora{background:#FFF3E0}.s-pur{background:#F3E5F5}
 
-        .hero-subtitle {
-            font-size: 20px;
-            color: var(--text-mid);
-            margin-bottom: 20px;
-            font-weight: 500;
-        }
+        /* --- MOTIVATION --- */
+        .motive-sec{padding:70px 20px;max-width:800px;margin:0 auto}
+        .motive-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+        .motive-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px 22px;text-align:center;box-shadow:0 2px 12px rgba(93,78,55,.05)}
+        .motive-card .m-ico{font-size:36px;margin-bottom:10px}
+        .motive-card h4{font-size:16px;color:var(--brown);margin-bottom:8px}
+        .motive-card p{font-size:13px;color:var(--mid);line-height:1.7}
 
-        .hero-description {
-            font-size: 16px;
-            color: var(--text-mid);
-            max-width: 540px;
-            margin: 0 auto 30px;
-            line-height: 1.9;
-        }
+        /* --- CTA --- */
+        .cta{text-align:center;padding:80px 20px;background:linear-gradient(180deg,var(--bg) 0%,var(--peach) 100%);position:relative;overflow:hidden}
+        .cta-chars{display:flex;justify-content:center;gap:16px;margin-bottom:28px}
+        .cta-chars img{width:64px;animation:bounce 2s ease-in-out infinite}
+        .cta-chars img:nth-child(2){animation-delay:.3s}
+        .cta-chars img:nth-child(3){animation-delay:.6s}
+        .cta h2{font-size:26px;color:var(--brown);margin-bottom:10px}
+        .cta p{font-size:15px;color:var(--mid);margin-bottom:26px}
 
-        .hero-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 14px;
-        }
-        .app-store-link img {
-            height: 54px;
-            transition: transform 0.2s;
-        }
-        .app-store-link img:hover {
-            transform: scale(1.07);
-        }
+        /* --- FOOTER --- */
+        footer{background:var(--brown);color:rgba(255,255,255,.7);text-align:center;padding:36px 20px}
+        .f-brand{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:14px}
+        .f-brand img{width:28px;height:28px;border-radius:7px}
+        .f-brand span{color:#fff;font-weight:700;font-size:16px}
+        .f-links{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:16px}
+        .f-links a{color:rgba(255,255,255,.75);text-decoration:none;font-size:14px;transition:color .2s}
+        .f-links a:hover{color:#fff}
+        footer small{font-size:12px;color:rgba(255,255,255,.45)}
 
-        .hero-rating {
-            margin-top: 16px;
-            font-size: 14px;
-            color: var(--text-light);
-        }
-        .hero-stars {
-            color: var(--accent-orange);
-            font-size: 16px;
-            letter-spacing: 2px;
-        }
+        /* --- MID-CTA (inline download buttons) --- */
+        .mid-cta{text-align:center;padding:28px 20px}
+        .mid-cta .dl-btn img{height:48px}
 
-        /* ===== STATS ===== */
-        .stats-bar {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            padding: 36px 20px;
-            max-width: 700px;
-            margin: 0 auto;
-            flex-wrap: wrap;
+        /* --- RESPONSIVE --- */
+        @media(max-width:768px){
+            .h-dog{width:60px;left:1%;top:6%}.h-cat{width:50px;right:1%;top:8%}.h-tanuki{width:50px;left:2%;bottom:5%}.h-oni{width:45px;right:4%;bottom:6%}
+            .hero{min-height:auto;padding:40px 16px 48px}.hero h1{font-size:36px}
+            .stat{min-width:100px;padding:16px 12px}.stat-n{font-size:28px}
+            .sec-title{font-size:24px}.ss-item img{width:190px}
+            .feat-grid{grid-template-columns:1fr}
+            .exp-wrap,.parent-wrap{flex-direction:column;text-align:center}
+            .exp-wrap img,.parent-wrap>img{width:200px}
+            .safety{grid-template-columns:1fr}
+            .b-char img{width:56px}
+            .cta-chars img{width:50px}
         }
-        .stat-item {
-            text-align: center;
-            background: var(--card-bg);
-            border: 1px solid var(--border-warm);
-            border-radius: 16px;
-            padding: 20px 24px;
-            min-width: 140px;
-            flex: 1;
-            box-shadow: 0 2px 12px rgba(93, 78, 55, 0.06);
-            transition: transform 0.2s;
-        }
-        .stat-item:hover { transform: translateY(-3px); }
-        .stat-number {
-            font-size: 34px;
-            font-weight: 800;
-            color: var(--accent-orange);
-        }
-        .stat-label {
-            font-size: 13px;
-            color: var(--text-light);
-            margin-top: 2px;
-        }
-
-        /* ===== SECTION COMMON ===== */
-        .section-title {
-            text-align: center;
-            font-size: 28px;
-            color: var(--primary-brown);
-            margin-bottom: 8px;
-        }
-        .section-subtitle {
-            text-align: center;
-            font-size: 15px;
-            color: var(--text-light);
-            margin-bottom: 40px;
-        }
-
-        /* ===== SCREENSHOTS ===== */
-        .screenshots-section {
-            padding: 60px 0;
-            background: var(--bg-cream);
-            position: relative;
-        }
-        .screenshots-scroll {
-            display: flex;
-            gap: 24px;
-            overflow-x: auto;
-            padding: 10px 40px 24px;
-            scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch;
-            scrollbar-width: none;
-        }
-        .screenshots-scroll::-webkit-scrollbar { display: none; }
-        .screenshot-item {
-            flex: 0 0 auto;
-            scroll-snap-align: center;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-        .screenshot-item:hover { transform: scale(1.03); }
-        .screenshot-item img {
-            width: 230px;
-            border-radius: 22px;
-            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.14);
-        }
-        .screenshot-caption {
-            margin-top: 12px;
-            font-size: 13px;
-            color: var(--text-mid);
-            font-weight: 600;
-        }
-
-        /* ===== FEATURES ===== */
-        .features-section {
-            padding: 70px 20px;
-            max-width: 960px;
-            margin: 0 auto;
-            position: relative;
-        }
-        .features-section .section-deco {
-            position: absolute;
-            width: 70px;
-            opacity: 0.15;
-            pointer-events: none;
-        }
-        .deco-top-right { top: 30px; right: 0; animation: floatSlow 5s ease-in-out infinite; }
-        .deco-bot-left { bottom: 30px; left: 0; animation: float 4s ease-in-out infinite; }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-            gap: 20px;
-        }
-        .feature-card {
-            background: var(--card-bg);
-            border-radius: 18px;
-            padding: 30px 26px;
-            box-shadow: var(--card-shadow);
-            border: 1px solid var(--border-warm);
-            transition: transform 0.25s, box-shadow 0.25s;
-            position: relative;
-            overflow: hidden;
-        }
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(93, 78, 55, 0.15);
-        }
-        .feature-card::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, transparent 50%, var(--bg-cream) 50%);
-            border-radius: 0 18px 0 0;
-            opacity: 0.5;
-        }
-        .feature-icon { font-size: 38px; margin-bottom: 14px; }
-        .feature-card h3 {
-            font-size: 18px;
-            color: var(--primary-brown);
-            margin-bottom: 10px;
-        }
-        .feature-card p {
-            font-size: 14px;
-            color: var(--text-mid);
-            line-height: 1.8;
-        }
-
-        /* ===== GAMES SHOWCASE ===== */
-        .games-section {
-            padding: 70px 20px;
-            background: linear-gradient(180deg, var(--bg-cream) 0%, #FDE8C8 50%, var(--bg-cream) 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        .games-section .battle-scene {
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            gap: 20px;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
-        }
-        .battle-char {
-            text-align: center;
-        }
-        .battle-char img {
-            width: 80px;
-            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
-        }
-        .battle-char.ally img { animation: bounce 2s ease-in-out infinite; }
-        .battle-char.enemy img { animation: wiggle 2.5s ease-in-out infinite; }
-        .battle-vs {
-            font-size: 28px;
-            font-weight: 800;
-            color: var(--accent-orange);
-            align-self: center;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .battle-label {
-            font-size: 11px;
-            color: var(--text-light);
-            margin-top: 6px;
-        }
-
-        .games-container { max-width: 820px; margin: 0 auto; }
-        .games-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
-            gap: 14px;
-        }
-        .game-tag {
-            background: var(--card-bg);
-            border: 1px solid var(--border-warm);
-            border-radius: 14px;
-            padding: 16px;
-            text-align: center;
-            font-size: 14px;
-            color: var(--primary-brown);
-            font-weight: 600;
-            box-shadow: 0 3px 10px rgba(93, 78, 55, 0.06);
-            transition: transform 0.25s, box-shadow 0.25s;
-            cursor: default;
-        }
-        .game-tag:hover {
-            transform: translateY(-4px) scale(1.02);
-            box-shadow: 0 8px 24px rgba(93, 78, 55, 0.12);
-        }
-        .game-emoji {
-            display: block;
-            font-size: 28px;
-            margin-bottom: 6px;
-        }
-        .game-desc {
-            font-size: 11px;
-            color: var(--text-light);
-            font-weight: 400;
-            margin-top: 4px;
-        }
-
-        /* ===== EXPLANATION SHOWCASE ===== */
-        .explanation-section {
-            padding: 70px 20px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        .explanation-content {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .explanation-content img {
-            width: 220px;
-            border-radius: 22px;
-            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.14);
-        }
-        .explanation-text {
-            flex: 1;
-            min-width: 300px;
-        }
-        .explanation-text h3 {
-            font-size: 24px;
-            color: var(--primary-brown);
-            margin-bottom: 14px;
-        }
-        .explanation-text p {
-            font-size: 15px;
-            color: var(--text-mid);
-            line-height: 1.9;
-            margin-bottom: 16px;
-        }
-        .explanation-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-        .explanation-tags span {
-            background: var(--bg-cream);
-            color: var(--primary-brown);
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 500;
-            border: 1px solid var(--border-warm);
-        }
-
-        /* ===== PARENT ===== */
-        .parent-section {
-            padding: 70px 20px;
-            background: var(--bg-cream);
-        }
-        .parent-inner {
-            max-width: 850px;
-            margin: 0 auto;
-        }
-        .parent-content {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .parent-content img {
-            width: 210px;
-            border-radius: 22px;
-            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.14);
-        }
-        .parent-text { flex: 1; min-width: 300px; }
-        .parent-text h3 {
-            font-size: 24px;
-            color: var(--primary-brown);
-            margin-bottom: 14px;
-        }
-        .parent-text p {
-            font-size: 15px;
-            color: var(--text-mid);
-            line-height: 1.9;
-            margin-bottom: 16px;
-        }
-        .safety-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-        }
-        .safety-item {
-            background: var(--card-bg);
-            border: 1px solid var(--border-warm);
-            border-radius: 12px;
-            padding: 14px 16px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 14px;
-            color: var(--text-dark);
-            font-weight: 500;
-        }
-        .safety-icon {
-            width: 32px;
-            height: 32px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-            flex-shrink: 0;
-        }
-        .safety-icon.green { background: #E8F5E9; }
-        .safety-icon.blue { background: #E3F2FD; }
-        .safety-icon.orange { background: #FFF3E0; }
-        .safety-icon.purple { background: #F3E5F5; }
-
-        /* ===== CTA ===== */
-        .cta-section {
-            text-align: center;
-            padding: 80px 20px;
-            background: linear-gradient(180deg, var(--bg-warm) 0%, var(--bg-peach) 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        .cta-section .cta-chars {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-            margin-bottom: 30px;
-        }
-        .cta-chars img {
-            width: 64px;
-            animation: bounce 2s ease-in-out infinite;
-        }
-        .cta-chars img:nth-child(2) { animation-delay: 0.3s; }
-        .cta-chars img:nth-child(3) { animation-delay: 0.6s; }
-        .cta-section h2 {
-            font-size: 28px;
-            color: var(--primary-brown);
-            margin-bottom: 10px;
-        }
-        .cta-section p {
-            font-size: 16px;
-            color: var(--text-mid);
-            margin-bottom: 28px;
-        }
-
-        /* ===== FOOTER ===== */
-        footer {
-            background: var(--primary-brown);
-            color: rgba(255, 255, 255, 0.7);
-            text-align: center;
-            padding: 36px 20px;
-        }
-        .footer-brand {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 16px;
-        }
-        .footer-brand img {
-            width: 28px;
-            height: 28px;
-            border-radius: 7px;
-        }
-        .footer-brand span {
-            color: white;
-            font-weight: 700;
-            font-size: 16px;
-        }
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 24px;
-            flex-wrap: wrap;
-            margin-bottom: 18px;
-        }
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.75);
-            text-decoration: none;
-            font-size: 14px;
-            transition: color 0.2s;
-        }
-        .footer-links a:hover { color: white; }
-        footer small { font-size: 12px; color: rgba(255, 255, 255, 0.45); }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 768px) {
-            .hero-dog { width: 65px; left: 2%; top: 8%; }
-            .hero-cat { width: 55px; right: 2%; top: 10%; }
-            .hero-tanuki { width: 55px; left: 3%; bottom: 6%; }
-            .hero-oni { width: 50px; right: 5%; bottom: 8%; }
-            .hero-castle { display: none; }
-            .hero h1 { font-size: 36px; }
-            .hero { min-height: auto; padding: 40px 16px 50px; }
-            .stat-item { min-width: 120px; padding: 16px 14px; }
-            .stat-number { font-size: 28px; }
-            .section-title { font-size: 24px; }
-            .screenshot-item img { width: 190px; }
-            .features-grid { grid-template-columns: 1fr; }
-            .explanation-content { flex-direction: column; text-align: center; }
-            .explanation-content img { width: 200px; }
-            .parent-content { flex-direction: column; text-align: center; }
-            .parent-content img { width: 190px; }
-            .safety-grid { grid-template-columns: 1fr; }
-            .battle-char img { width: 60px; }
-            .cta-chars img { width: 50px; }
-        }
-        @media (max-width: 480px) {
-            .nav-links { gap: 10px; }
-            .nav-links a { font-size: 12px; }
-            .hero h1 { font-size: 30px; }
-            .hero-subtitle { font-size: 16px; }
-            .stats-bar { gap: 8px; }
-            .stat-item { min-width: 70px; padding: 14px 10px; }
-            .stat-number { font-size: 24px; }
-            .games-grid { grid-template-columns: repeat(2, 1fr); }
+        @media(max-width:480px){
+            .nav-links{gap:10px}.nav-links a{font-size:12px}
+            .hero h1{font-size:28px}.hero-sub{font-size:16px}
+            .stats{gap:8px}.stat{min-width:70px;padding:14px 8px}.stat-n{font-size:24px}
+            .g-grid{grid-template-columns:repeat(2,1fr)}
+            .motive-cards{grid-template-columns:1fr}
         }
     </style>
 </head>
 <body>
 
-    <!-- NAV -->
-    <nav>
-        <a href="index.html" class="nav-brand">
-            <img src="images/app-icon.png" alt="ポチ単" width="34" height="34">
-            ポチ単
-        </a>
-        <div class="nav-links">
-            <a href="index.html" class="active">ホーム</a>
-            <a href="support.html">サポート</a>
-            <a href="privacy-policy.html">プライバシー</a>
-            <a href="terms-of-service.html">利用規約</a>
-        </div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="hero">
-        <!-- Floating characters -->
-        <img src="images/pochitan-dog.png" alt="" class="hero-char hero-dog" width="100" height="100" loading="eager">
-        <img src="images/pochitan-cat.png" alt="" class="hero-char hero-cat" width="85" height="85" loading="eager">
-        <img src="images/pochitan-tanuki.png" alt="" class="hero-char hero-tanuki" width="80" height="80" loading="lazy">
-        <img src="images/oni-red.png" alt="" class="hero-char hero-oni" width="70" height="70" loading="lazy">
-        <img src="images/castle.png" alt="" class="hero-castle" loading="lazy">
-
-        <div class="hero-content">
-            <img src="images/app-icon.png" alt="ポチ単 英検5級単語帳アプリ アイコン" class="hero-icon" width="130" height="130">
-            <div><span class="hero-badge">完全無料 ・ 広告なし ・ 課金なし</span></div>
-            <h1>ポチ単</h1>
-            <p class="hero-subtitle">英検5級の書斎</p>
-            <p class="hero-description">
-                英検5級の全579語を、12種類の楽しいゲームとクイズで自然に身につけよう。<br>
-                ポチたんと仲間たちが、お子さまの英語学習を毎日サポートします。
-            </p>
-            <div class="hero-cta">
-                <a href="https://apps.apple.com/app/id6757858287" target="_blank" rel="noopener" class="app-store-link" aria-label="App Storeからダウンロード">
-                    <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ja-jp?size=250x83" alt="App Storeからダウンロード" height="54">
-                </a>
-            </div>
-            <p class="hero-rating">
-                <span class="hero-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0 &middot; App Store 教育カテゴリ
-            </p>
-        </div>
-    </section>
-
-    <!-- STATS -->
-    <div class="stats-bar animate-on-scroll">
-        <div class="stat-item">
-            <div class="stat-number">579</div>
-            <div class="stat-label">収録単語</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-number">12</div>
-            <div class="stat-label">種類のゲーム</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-number">33</div>
-            <div class="stat-label">カテゴリ</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-number">310</div>
-            <div class="stat-label">短文問題</div>
-        </div>
+<nav>
+    <a href="index.html" class="nav-brand"><img src="images/app-icon.png" alt="ポチ単" width="34" height="34">ポチ単</a>
+    <div class="nav-links">
+        <a href="index.html" class="active">ホーム</a>
+        <a href="support.html">サポート</a>
+        <a href="privacy-policy.html">プライバシー</a>
+        <a href="terms-of-service.html">利用規約</a>
     </div>
+</nav>
 
-    <!-- SCREENSHOTS -->
-    <section class="screenshots-section">
-        <h2 class="section-title animate-on-scroll">アプリの画面</h2>
-        <p class="section-subtitle animate-on-scroll">横スクロールで全画面をチェック</p>
-        <div class="screenshots-scroll">
-            <div class="screenshot-item">
-                <img src="images/screenshot-home.png" alt="ポチ単ホーム画面 - 今日の目標や学習進捗を確認" width="230" loading="lazy">
-                <div class="screenshot-caption">ホーム画面</div>
-            </div>
-            <div class="screenshot-item">
-                <img src="images/screenshot-priority.png" alt="今日の優先学習 - 復習と新規学習を選択" width="230" loading="lazy">
-                <div class="screenshot-caption">今日の優先学習</div>
-            </div>
-            <div class="screenshot-item">
-                <img src="images/screenshot-modes.png" alt="学習モード一覧 - 6種類の学習方法" width="230" loading="lazy">
-                <div class="screenshot-caption">充実の学習モード</div>
-            </div>
-            <div class="screenshot-item">
-                <img src="images/screenshot-quiz.png" alt="4択クイズ - 日本語から英語へ変換する問題" width="230" loading="lazy">
-                <div class="screenshot-caption">4択クイズ</div>
-            </div>
-            <div class="screenshot-item">
-                <img src="images/screenshot-explanation.png" alt="詳細解説画面 - 発音や例文を掲載" width="230" loading="lazy">
-                <div class="screenshot-caption">詳しい解説</div>
-            </div>
-            <div class="screenshot-item">
-                <img src="images/screenshot-games.png" alt="ゲームモード一覧 - 12種類のゲーム" width="230" loading="lazy">
-                <div class="screenshot-caption">ゲームモード</div>
-            </div>
-            <div class="screenshot-item">
-                <img src="images/screenshot-game-blocks.png" alt="ブロックブラストゲーム - 英単語でブロック消し" width="230" loading="lazy">
-                <div class="screenshot-caption">ブロックブラスト</div>
-            </div>
-            <div class="screenshot-item">
-                <img src="images/screenshot-game-sling.png" alt="ワードスリングゲーム - ボールで英語ブロックを壊す" width="230" loading="lazy">
-                <div class="screenshot-caption">ワードスリング</div>
-            </div>
-            <div class="screenshot-item">
-                <img src="images/screenshot-dashboard.png" alt="保護者ダッシュボード - 学習進捗をグラフで確認" width="230" loading="lazy">
-                <div class="screenshot-caption">保護者ダッシュボード</div>
-            </div>
+<!-- ===== HERO ===== -->
+<section class="hero">
+    <img src="images/pochitan-dog.png" alt="" class="hero-char h-dog" width="100" height="100">
+    <img src="images/pochitan-cat.png" alt="" class="hero-char h-cat" width="85" height="85">
+    <img src="images/pochitan-tanuki.png" alt="" class="hero-char h-tanuki" width="80" height="80">
+    <img src="images/oni-red.png" alt="" class="hero-char h-oni" width="70" height="70">
+
+    <div class="hero-content">
+        <img src="images/app-icon.png" alt="ポチ単 英検5級単語帳アプリ" class="hero-icon" width="130" height="130">
+        <div class="hero-badges">
+            <span class="badge badge-green">完全無料</span>
+            <span class="badge badge-outline">広告なし</span>
+            <span class="badge badge-outline">課金なし</span>
         </div>
-    </section>
-
-    <!-- FEATURES -->
-    <section class="features-section">
-        <img src="images/oni-blue.png" alt="" class="section-deco deco-top-right" loading="lazy">
-        <img src="images/coin.png" alt="" class="section-deco deco-bot-left" loading="lazy">
-
-        <h2 class="section-title animate-on-scroll">ポチ単の特長</h2>
-        <p class="section-subtitle animate-on-scroll">英検5級合格に必要な力を、楽しく身につける</p>
-        <div class="features-grid">
-            <div class="feature-card animate-on-scroll">
-                <div class="feature-icon">&#x1F3AF;</div>
-                <h3>4択クイズ + 詳しい解説</h3>
-                <p>全579語に丁寧な解説・例文・よく出るフレーズ付き。ただの暗記ではなく「使える英語」が身につきます。</p>
-            </div>
-            <div class="feature-card animate-on-scroll">
-                <div class="feature-icon">&#x1F3AE;</div>
-                <h3>12種類のゲームモード</h3>
-                <p>シューティング、ブロック崩し、もぐら叩き、しりとりなど、遊びながら自然に単語を記憶できます。</p>
-            </div>
-            <div class="feature-card animate-on-scroll">
-                <div class="feature-icon">&#x1F4C5;</div>
-                <h3>毎日の目標と復習</h3>
-                <p>忘却曲線に基づいた復習システム（SRS）で効率よく定着。毎日の目標設定で学習習慣を自然に作ります。</p>
-            </div>
-            <div class="feature-card animate-on-scroll">
-                <div class="feature-icon">&#x1F3A7;</div>
-                <h3>リスニング・発音学習</h3>
-                <p>ネイティブ音声でリスニング力も同時に強化。短文穴埋めモードで実践的な英語力を伸ばします。</p>
-            </div>
-            <div class="feature-card animate-on-scroll">
-                <div class="feature-icon">&#x1F4CA;</div>
-                <h3>保護者ダッシュボード</h3>
-                <p>パスワード付きダッシュボードで、正答率や学習日数など、お子さまの成長をグラフで確認できます。</p>
-            </div>
-            <div class="feature-card animate-on-scroll">
-                <div class="feature-icon">&#x1F512;</div>
-                <h3>安心・安全設計</h3>
-                <p>広告なし・課金なし・個人情報収集なし・トラッキングなし。お子さまが安心して使える設計です。</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- GAMES SHOWCASE -->
-    <section class="games-section">
-        <div class="games-container">
-            <h2 class="section-title animate-on-scroll">12種類のゲーム</h2>
-            <p class="section-subtitle animate-on-scroll">ポチたんと仲間が鬼と英語バトル！遊ぶだけで単語が身につく</p>
-
-            <!-- Battle Scene -->
-            <div class="battle-scene animate-on-scroll">
-                <div class="battle-char ally">
-                    <img src="images/pochitan-dog.png" alt="ポチたん" width="80" height="80">
-                    <div class="battle-label">ポチたん</div>
-                </div>
-                <div class="battle-char ally">
-                    <img src="images/pochitan-cat.png" alt="ネコ" width="80" height="80">
-                    <div class="battle-label">ネコちゃん</div>
-                </div>
-                <div class="battle-char ally">
-                    <img src="images/pochitan-tanuki.png" alt="タヌキ" width="80" height="80">
-                    <div class="battle-label">タヌキくん</div>
-                </div>
-                <div class="battle-vs">VS</div>
-                <div class="battle-char enemy">
-                    <img src="images/oni-red.png" alt="赤鬼" width="80" height="80">
-                    <div class="battle-label">赤オニ</div>
-                </div>
-                <div class="battle-char enemy">
-                    <img src="images/oni-blue.png" alt="青鬼" width="80" height="80">
-                    <div class="battle-label">青オニ</div>
-                </div>
-                <div class="battle-char enemy">
-                    <img src="images/oni-yellow.png" alt="黄鬼" width="80" height="80">
-                    <div class="battle-label">黄オニ</div>
-                </div>
-            </div>
-
-            <div class="games-grid animate-on-scroll">
-                <div class="game-tag">
-                    <span class="game-emoji">&#x1F52B;</span>ワードシューティング
-                    <div class="game-desc">的当てFPSで英単語を撃て！</div>
-                </div>
-                <div class="game-tag">
-                    <span class="game-emoji">&#x1F6E1;&#xFE0F;</span>ワードディフェンス
-                    <div class="game-desc">英単語で城を守れ！</div>
-                </div>
-                <div class="game-tag">
-                    <span class="game-emoji">&#x1F0CF;</span>ワードマッチング
-                    <div class="game-desc">英語と日本語のペア探し</div>
-                </div>
-                <div class="game-tag">
-                    <span class="game-emoji">&#x1F517;</span>ワードチェイン
-                    <div class="game-desc">英単語でしりとり！</div>
-                </div>
-                <div class="game-tag">
-                    <span class="game-emoji">&#x2B50;</span>ワードフォーリング
-                    <div class="game-desc">落ちてくる正解をタップ</div>
-                </div>
-                <div class="game-tag">
-                    <span class="game-emoji">&#x1F528;</span>ワードワック
-                    <div class="game-desc">もぐら叩きで英語学習</div>
-                </div>
-                <div class="game-tag">
-                    <span class="game-emoji">&#x1F9F1;</span>ブロックブラスト
-                    <div class="game-desc">英語ブロックを消していこう</div>
-                </div>
-                <div class="game-tag">
-                    <span class="game-emoji">&#x2708;&#xFE0F;</span>ワードスカイ
-                    <div class="game-desc">空を飛んで単語をゲット</div>
-                </div>
-                <div class="game-tag">
-                    <span class="game-emoji">&#x2328;&#xFE0F;</span>ワードタイピング
-                    <div class="game-desc">キーボードで素早く入力</div>
-                </div>
-                <div class="game-tag">
-                    <span class="game-emoji">&#x1F3C3;</span>ワードレーン
-                    <div class="game-desc">ランゲームで単語を集めろ</div>
-                </div>
-                <div class="game-tag">
-                    <span class="game-emoji">&#x1F9E9;</span>ワードパズル
-                    <div class="game-desc">パズルを組み立てよう</div>
-                </div>
-                <div class="game-tag">
-                    <span class="game-emoji">&#x1F3B1;</span>ワードスリング
-                    <div class="game-desc">ボールで英語ブロックを破壊</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- EXPLANATION SHOWCASE -->
-    <section class="explanation-section">
-        <div class="explanation-content animate-on-scroll">
-            <img src="images/screenshot-explanation.png" alt="ポチ単の詳細解説画面 - 発音、フレーズ、穴埋め問題付き" width="220" loading="lazy">
-            <div class="explanation-text">
-                <h3>ただの単語帳じゃない。<br>全語に「絶対読む」解説付き</h3>
-                <p>
-                    579語すべてに、発音のコツ、よく出るフレーズ、間違い探し、並べ替え問題を収録。
-                    「覚えた」で終わらず「使える」レベルまで到達できます。
-                </p>
-                <div class="explanation-tags">
-                    <span>発音ガイド</span>
-                    <span>5級頻出フレーズ</span>
-                    <span>間違い探し</span>
-                    <span>並べ替え問題</span>
-                    <span>カテゴリ別</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PARENT SECTION -->
-    <section class="parent-section">
-        <div class="parent-inner">
-            <h2 class="section-title animate-on-scroll">保護者の方へ</h2>
-            <p class="section-subtitle animate-on-scroll">お子さまの学習を安心して見守れます</p>
-            <div class="parent-content animate-on-scroll">
-                <img src="images/screenshot-dashboard.png" alt="保護者ダッシュボード - 正答率、学習日数、習得単語数を確認" width="210" loading="lazy">
-                <div class="parent-text">
-                    <h3>パスワード付きダッシュボードで<br>成長を見守れます</h3>
-                    <p>お子さまの学習状況をいつでもグラフで確認。「今日どれくらい勉強した？」がひと目で分かります。</p>
-                    <div class="safety-grid">
-                        <div class="safety-item">
-                            <div class="safety-icon green">&#x2713;</div>
-                            広告ゼロ
-                        </div>
-                        <div class="safety-item">
-                            <div class="safety-icon green">&#x2713;</div>
-                            課金ゼロ
-                        </div>
-                        <div class="safety-item">
-                            <div class="safety-icon blue">&#x1F512;</div>
-                            個人情報収集なし
-                        </div>
-                        <div class="safety-item">
-                            <div class="safety-icon blue">&#x1F512;</div>
-                            トラッキングなし
-                        </div>
-                        <div class="safety-item">
-                            <div class="safety-icon orange">&#x1F4CA;</div>
-                            学習進捗グラフ
-                        </div>
-                        <div class="safety-item">
-                            <div class="safety-icon purple">&#x1F3AF;</div>
-                            目標量を調整可能
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta-section">
-        <div class="cta-chars">
-            <img src="images/pochitan-dog.png" alt="" width="64" height="64" loading="lazy">
-            <img src="images/pochitan-cat.png" alt="" width="64" height="64" loading="lazy">
-            <img src="images/pochitan-tanuki.png" alt="" width="64" height="64" loading="lazy">
-        </div>
-        <h2>ポチたんと一緒に英検5級をマスターしよう！</h2>
-        <p>完全無料 ・ 広告なし ・ 今すぐダウンロード</p>
-        <a href="https://apps.apple.com/app/id6757858287" target="_blank" rel="noopener" class="app-store-link" aria-label="App Storeからダウンロード">
+        <h1>ポチ単</h1>
+        <p class="hero-sub">英検5級の書斎</p>
+        <p class="hero-catch">ゲームで遊ぶだけで、英検5級の単語が身につく。</p>
+        <p class="hero-desc">
+            579語すべてに丁寧な解説付き。12種類のゲームで毎日飽きずに続けられます。<br>
+            忘却曲線に基づく復習機能で「覚えたのに忘れた」をなくします。
+        </p>
+        <a href="https://apps.apple.com/jp/app/id6757858287" target="_blank" rel="noopener" class="dl-btn" aria-label="App Storeからダウンロード">
             <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ja-jp?size=250x83" alt="App Storeからダウンロード" height="54">
         </a>
-    </section>
+        <p class="hero-review"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0 &middot; App Store 教育カテゴリ &middot; iPhone対応</p>
+    </div>
+</section>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-brand">
-            <img src="images/app-icon.png" alt="" width="28" height="28">
-            <span>ポチ単</span>
+<!-- ===== こんなお悩みありませんか？ ===== -->
+<section class="problem">
+    <div class="problem-inner">
+        <h2 class="sec-title anim">こんなお悩みありませんか？</h2>
+        <p class="sec-sub anim">英検5級の学習でよくある困りごと</p>
+        <div class="worry-list anim">
+            <div class="worry">
+                <span class="worry-icon">&#x1F4D6;</span>
+                <span>単語帳を買ったけど、子どもが<em>すぐ飽きてしまう</em>...</span>
+            </div>
+            <div class="worry">
+                <span class="worry-icon">&#x1F62D;</span>
+                <span>覚えたはずなのに、テストでは<em>思い出せない</em>...</span>
+            </div>
+            <div class="worry">
+                <span class="worry-icon">&#x1F4F1;</span>
+                <span>アプリは便利だけど、<em>広告が多くて心配</em>...</span>
+            </div>
+            <div class="worry">
+                <span class="worry-icon">&#x1F468;&#x200D;&#x1F469;&#x200D;&#x1F467;</span>
+                <span>子どもがどれくらい勉強したか<em>把握できない</em>...</span>
+            </div>
         </div>
-        <div class="footer-links">
-            <a href="support.html">サポート</a>
-            <a href="privacy-policy.html">プライバシーポリシー</a>
-            <a href="terms-of-service.html">利用規約</a>
+        <div class="solution anim">
+            <div class="solution-arrow">&#x25BC;</div>
+            <h3>ポチ単が、全部解決します。</h3>
+            <p>ゲームだから飽きない。復習機能で忘れない。広告ゼロで安心。保護者ダッシュボードで見守れる。</p>
+            <div class="solution-chars">
+                <img src="images/pochitan-dog.png" alt="ポチたん" width="56" height="56">
+                <img src="images/pochitan-cat.png" alt="ネコちゃん" width="56" height="56">
+                <img src="images/pochitan-tanuki.png" alt="タヌキくん" width="56" height="56">
+            </div>
         </div>
-        <small>&copy; 2026 Eri Ito. All Rights Reserved.</small>
-    </footer>
+    </div>
+</section>
 
-    <!-- Scroll Animation Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var observer = new IntersectionObserver(function(entries) {
-                entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+<!-- ===== STATS ===== -->
+<div class="stats anim">
+    <div class="stat"><div class="stat-n">579</div><div class="stat-l">収録単語</div></div>
+    <div class="stat"><div class="stat-n">12</div><div class="stat-l">種類のゲーム</div></div>
+    <div class="stat"><div class="stat-n">33</div><div class="stat-l">カテゴリ</div></div>
+    <div class="stat"><div class="stat-n">310</div><div class="stat-l">短文問題</div></div>
+</div>
 
-            document.querySelectorAll('.animate-on-scroll').forEach(function(el) {
-                observer.observe(el);
-            });
-        });
-    </script>
+<!-- ===== SCREENSHOTS ===== -->
+<section class="ss-sec">
+    <h2 class="sec-title anim">アプリの画面をチェック</h2>
+    <p class="sec-sub anim">左右にスクロールできます</p>
+    <div class="ss-scroll">
+        <div class="ss-item"><img src="images/screenshot-home.png" alt="ポチ単ホーム画面" width="230" loading="lazy"><div class="ss-cap">ホーム画面</div></div>
+        <div class="ss-item"><img src="images/screenshot-priority.png" alt="今日の優先学習画面" width="230" loading="lazy"><div class="ss-cap">今日の優先学習</div></div>
+        <div class="ss-item"><img src="images/screenshot-modes.png" alt="学習モード一覧" width="230" loading="lazy"><div class="ss-cap">充実の学習モード</div></div>
+        <div class="ss-item"><img src="images/screenshot-quiz.png" alt="4択クイズ画面" width="230" loading="lazy"><div class="ss-cap">4択クイズ</div></div>
+        <div class="ss-item"><img src="images/screenshot-explanation.png" alt="詳細解説画面" width="230" loading="lazy"><div class="ss-cap">詳しい解説</div></div>
+        <div class="ss-item"><img src="images/screenshot-games.png" alt="ゲームモード一覧" width="230" loading="lazy"><div class="ss-cap">12種のゲーム</div></div>
+        <div class="ss-item"><img src="images/screenshot-game-blocks.png" alt="ブロックブラスト" width="230" loading="lazy"><div class="ss-cap">ブロックブラスト</div></div>
+        <div class="ss-item"><img src="images/screenshot-game-sling.png" alt="ワードスリング" width="230" loading="lazy"><div class="ss-cap">ワードスリング</div></div>
+        <div class="ss-item"><img src="images/screenshot-dashboard.png" alt="保護者ダッシュボード" width="230" loading="lazy"><div class="ss-cap">保護者ダッシュボード</div></div>
+    </div>
+    <div class="mid-cta">
+        <a href="https://apps.apple.com/jp/app/id6757858287" target="_blank" rel="noopener" class="dl-btn"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ja-jp?size=250x83" alt="App Storeからダウンロード" height="48"></a>
+    </div>
+</section>
 
+<!-- ===== FEATURES ===== -->
+<section class="feat-sec">
+    <img src="images/oni-blue.png" alt="" class="feat-deco deco-tr" loading="lazy">
+    <img src="images/coin.png" alt="" class="feat-deco deco-bl" loading="lazy">
+    <h2 class="sec-title anim">ポチ単が選ばれる6つの理由</h2>
+    <p class="sec-sub anim">英検5級合格に必要な力を、楽しく確実に</p>
+    <div class="feat-grid">
+        <div class="feat-card anim"><div class="feat-ico">&#x1F3AF;</div><h3>全579語に詳しい解説</h3><p>発音のコツ、頻出フレーズ、間違い探し、並べ替え問題まで。「覚えた」で終わらず「使える」レベルに到達。</p></div>
+        <div class="feat-card anim"><div class="feat-ico">&#x1F3AE;</div><h3>飽きない12種のゲーム</h3><p>シューティング、ブロック崩し、もぐら叩き、タイピングなど。ゲームで遊ぶだけで自然に単語を記憶。</p></div>
+        <div class="feat-card anim"><div class="feat-ico">&#x1F504;</div><h3>忘れない復習システム</h3><p>忘却曲線に基づくSRS（間隔反復）で最適なタイミングで復習。せっかく覚えた単語を忘れません。</p></div>
+        <div class="feat-card anim"><div class="feat-ico">&#x1F3A7;</div><h3>リスニング・発音も強化</h3><p>ネイティブ音声で耳から覚える。短文穴埋め310問で実践的な英語力も身につきます。</p></div>
+        <div class="feat-card anim"><div class="feat-ico">&#x1F4CA;</div><h3>保護者ダッシュボード</h3><p>パスワード付きで安心。正答率、学習日数、習得率をグラフで確認。お子さまの成長が一目で分かります。</p></div>
+        <div class="feat-card anim"><div class="feat-ico">&#x1F512;</div><h3>安心・安全設計</h3><p>広告ゼロ・課金ゼロ・個人情報収集ゼロ・トラッキングなし。お子さまだけでも安心して使えます。</p></div>
+    </div>
+</section>
+
+<!-- ===== GAMES ===== -->
+<section class="games-sec">
+    <div class="games-inner">
+        <h2 class="sec-title anim">12種類のゲームモード</h2>
+        <p class="sec-sub anim">ポチたんと仲間たちが鬼と英語バトル！</p>
+        <div class="battle anim">
+            <div class="b-char ally"><img src="images/pochitan-dog.png" alt="ポチたん" width="76"><div class="b-label">ポチたん</div></div>
+            <div class="b-char ally"><img src="images/pochitan-cat.png" alt="ネコ" width="76"><div class="b-label">ネコちゃん</div></div>
+            <div class="b-char ally"><img src="images/pochitan-tanuki.png" alt="タヌキ" width="76"><div class="b-label">タヌキくん</div></div>
+            <div class="b-vs">VS</div>
+            <div class="b-char enemy"><img src="images/oni-red.png" alt="赤鬼" width="76"><div class="b-label">赤オニ</div></div>
+            <div class="b-char enemy"><img src="images/oni-blue.png" alt="青鬼" width="76"><div class="b-label">青オニ</div></div>
+            <div class="b-char enemy"><img src="images/oni-yellow.png" alt="黄鬼" width="76"><div class="b-label">黄オニ</div></div>
+        </div>
+        <div class="g-grid anim">
+            <div class="g-tag"><span class="g-emoji">&#x1F52B;</span>ワードシューティング<div class="g-desc">的当てFPSで英単語を撃て！</div></div>
+            <div class="g-tag"><span class="g-emoji">&#x1F6E1;&#xFE0F;</span>ワードディフェンス<div class="g-desc">英単語で城を守れ！</div></div>
+            <div class="g-tag"><span class="g-emoji">&#x1F0CF;</span>ワードマッチング<div class="g-desc">英語と日本語のペア探し</div></div>
+            <div class="g-tag"><span class="g-emoji">&#x1F517;</span>ワードチェイン<div class="g-desc">英単語でしりとり！</div></div>
+            <div class="g-tag"><span class="g-emoji">&#x2B50;</span>ワードフォーリング<div class="g-desc">落ちてくる正解をタップ</div></div>
+            <div class="g-tag"><span class="g-emoji">&#x1F528;</span>ワードワック<div class="g-desc">もぐら叩きで英語学習</div></div>
+            <div class="g-tag"><span class="g-emoji">&#x1F9F1;</span>ブロックブラスト<div class="g-desc">英語ブロックを消していこう</div></div>
+            <div class="g-tag"><span class="g-emoji">&#x2708;&#xFE0F;</span>ワードスカイ<div class="g-desc">空を飛んで単語をゲット</div></div>
+            <div class="g-tag"><span class="g-emoji">&#x2328;&#xFE0F;</span>ワードタイピング<div class="g-desc">キーボードで素早く入力</div></div>
+            <div class="g-tag"><span class="g-emoji">&#x1F3C3;</span>ワードレーン<div class="g-desc">ランゲームで単語を集めろ</div></div>
+            <div class="g-tag"><span class="g-emoji">&#x1F9E9;</span>ワードパズル<div class="g-desc">パズルを組み立てよう</div></div>
+            <div class="g-tag"><span class="g-emoji">&#x1F3B1;</span>ワードスリング<div class="g-desc">ボールで英語ブロックを破壊</div></div>
+        </div>
+        <div class="mid-cta" style="margin-top:36px">
+            <a href="https://apps.apple.com/jp/app/id6757858287" target="_blank" rel="noopener" class="dl-btn"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ja-jp?size=250x83" alt="App Storeからダウンロード" height="48"></a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== EXPLANATION ===== -->
+<section class="exp-sec">
+    <div class="exp-wrap anim">
+        <img src="images/screenshot-explanation.png" alt="ポチ単の詳細解説画面" width="220" loading="lazy">
+        <div class="exp-text">
+            <h3>ただの単語帳じゃない。<br>全語に「絶対読む」解説付き</h3>
+            <p>579語すべてに、発音のコツ、よく出るフレーズ、間違い探し、並べ替え問題を収録。テストで「見たことあるけど思い出せない...」をなくします。</p>
+            <div class="exp-tags">
+                <span>発音ガイド</span><span>5級頻出フレーズ</span><span>間違い探し</span><span>並べ替え問題</span><span>カテゴリ別</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== PARENT ===== -->
+<section class="parent-sec">
+    <div class="parent-inner">
+        <h2 class="sec-title anim">保護者の方へ</h2>
+        <p class="sec-sub anim">お子さまの学習を安心して見守れます</p>
+        <div class="parent-wrap anim">
+            <img src="images/screenshot-dashboard.png" alt="保護者ダッシュボード" width="210" loading="lazy">
+            <div class="parent-text">
+                <h3>パスワード付きダッシュボードで<br>お子さまの成長を確認</h3>
+                <p>「今日どれくらい勉強した？」がひと目で分かります。正答率の変化や学習日数など、頑張りを数字で褒めてあげられます。</p>
+                <div class="safety">
+                    <div class="safety-item"><div class="s-ico s-green">&#x2713;</div>広告ゼロ</div>
+                    <div class="safety-item"><div class="s-ico s-green">&#x2713;</div>課金ゼロ</div>
+                    <div class="safety-item"><div class="s-ico s-blue">&#x1F512;</div>個人情報収集なし</div>
+                    <div class="safety-item"><div class="s-ico s-blue">&#x1F512;</div>トラッキングなし</div>
+                    <div class="safety-item"><div class="s-ico s-ora">&#x1F4CA;</div>学習進捗グラフ</div>
+                    <div class="safety-item"><div class="s-ico s-pur">&#x1F3AF;</div>目標量を調整可能</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== WHY EIKEN ===== -->
+<section class="motive-sec">
+    <h2 class="sec-title anim">なぜ今、英検5級なの？</h2>
+    <p class="sec-sub anim">小学生のうちに英検を取るメリット</p>
+    <div class="motive-cards anim">
+        <div class="motive-card">
+            <div class="m-ico">&#x1F393;</div>
+            <h4>中学受験で有利に</h4>
+            <p>英検取得を加点対象とする中学校が増えています。5級は最初の一歩として最適です。</p>
+        </div>
+        <div class="motive-card">
+            <div class="m-ico">&#x1F4AA;</div>
+            <h4>中学英語に自信がつく</h4>
+            <p>英検5級は中学1年レベル。先取りで学んでおけば、中学の授業に余裕を持って臨めます。</p>
+        </div>
+        <div class="motive-card">
+            <div class="m-ico">&#x1F31F;</div>
+            <h4>成功体験が次の挑戦へ</h4>
+            <p>「合格した！」という体験がお子さまの自信になり、4級、3級へのステップアップにつながります。</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta">
+    <div class="cta-chars">
+        <img src="images/pochitan-dog.png" alt="" width="64" height="64" loading="lazy">
+        <img src="images/pochitan-cat.png" alt="" width="64" height="64" loading="lazy">
+        <img src="images/pochitan-tanuki.png" alt="" width="64" height="64" loading="lazy">
+    </div>
+    <h2>ポチたんと一緒に<br>英検5級をマスターしよう！</h2>
+    <p>完全無料 ・ 広告なし ・ 今すぐダウンロード</p>
+    <a href="https://apps.apple.com/jp/app/id6757858287" target="_blank" rel="noopener" class="dl-btn"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ja-jp?size=250x83" alt="App Storeからダウンロード" height="54"></a>
+</section>
+
+<footer>
+    <div class="f-brand"><img src="images/app-icon.png" alt="" width="28" height="28"><span>ポチ単</span></div>
+    <div class="f-links">
+        <a href="support.html">サポート</a>
+        <a href="privacy-policy.html">プライバシーポリシー</a>
+        <a href="terms-of-service.html">利用規約</a>
+    </div>
+    <small>&copy; 2026 Eri Ito. All Rights Reserved.</small>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+    var o=new IntersectionObserver(function(e){e.forEach(function(e){if(e.isIntersecting)e.target.classList.add('v')})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.anim').forEach(function(e){o.observe(e)});
+});
+</script>
 </body>
 </html>
