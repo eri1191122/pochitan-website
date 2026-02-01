@@ -131,8 +131,9 @@
 
         /* --- SCREENSHOTS --- */
         .ss-sec{padding:64px 0;background:var(--cream)}
-        .ss-scroll{display:flex;gap:24px;overflow-x:auto;padding:10px 40px 24px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+        .ss-scroll{display:flex;gap:20px;overflow-x:auto;padding:10px 0 24px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin:0 auto;max-width:100%}
         .ss-scroll::-webkit-scrollbar{display:none}
+        .ss-scroll::before,.ss-scroll::after{content:'';flex:0 0 max(20px,calc((100vw - 960px)/2));min-width:20px}
         .ss-item{flex:0 0 auto;scroll-snap-align:center;text-align:center;transition:transform .3s}
         .ss-item:hover{transform:scale(1.03)}
         .ss-item img{width:230px;border-radius:22px;box-shadow:0 10px 35px rgba(0,0,0,.13)}
@@ -167,14 +168,20 @@
         .g-desc{font-size:11px;color:var(--light);font-weight:400;margin-top:3px}
 
         /* --- EXPLANATION --- */
-        .exp-sec{padding:70px 20px;max-width:900px;margin:0 auto}
-        .exp-wrap{display:flex;align-items:center;gap:44px;flex-wrap:wrap;justify-content:center}
-        .exp-wrap img{width:220px;border-radius:22px;box-shadow:0 10px 35px rgba(0,0,0,.13)}
-        .exp-text{flex:1;min-width:300px}
-        .exp-text h3{font-size:24px;color:var(--brown);margin-bottom:14px;line-height:1.5}
-        .exp-text p{font-size:15px;color:var(--mid);line-height:1.9;margin-bottom:16px}
-        .exp-tags{display:flex;flex-wrap:wrap;gap:8px}
-        .exp-tags span{background:var(--cream);color:var(--brown);padding:6px 14px;border-radius:20px;font-size:13px;font-weight:500;border:1px solid var(--border)}
+        .exp-sec{padding:70px 20px;max-width:960px;margin:0 auto}
+        .exp-hero{display:flex;align-items:flex-start;gap:36px;flex-wrap:wrap;justify-content:center;margin-bottom:40px}
+        .exp-screens{display:flex;gap:16px;flex-shrink:0}
+        .exp-screens img{width:190px;border-radius:20px;box-shadow:0 10px 35px rgba(0,0,0,.13)}
+        .exp-intro{flex:1;min-width:300px}
+        .exp-intro h3{font-size:24px;color:var(--brown);margin-bottom:14px;line-height:1.5}
+        .exp-intro p{font-size:15px;color:var(--mid);line-height:1.9;margin-bottom:16px}
+        .exp-structure{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+        .exp-step{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;box-shadow:0 2px 10px rgba(93,78,55,.04)}
+        .exp-step-head{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+        .exp-step-num{background:var(--orange);color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0}
+        .exp-step-title{font-size:15px;font-weight:700;color:var(--brown)}
+        .exp-step p{font-size:13px;color:var(--mid);line-height:1.7}
+        .exp-step .ex{font-size:12px;color:var(--light);margin-top:6px;font-style:italic}
 
         /* --- PARENT --- */
         .parent-sec{padding:70px 20px;background:var(--cream)}
@@ -190,12 +197,23 @@
         .s-green{background:#E8F5E9}.s-blue{background:#E3F2FD}.s-ora{background:#FFF3E0}.s-pur{background:#F3E5F5}
 
         /* --- MOTIVATION --- */
-        .motive-sec{padding:70px 20px;max-width:800px;margin:0 auto}
-        .motive-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-        .motive-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px 22px;text-align:center;box-shadow:0 2px 12px rgba(93,78,55,.05)}
-        .motive-card .m-ico{font-size:36px;margin-bottom:10px}
+        .motive-sec{padding:70px 20px;background:linear-gradient(180deg,var(--bg) 0%,#FDE8C8 50%,var(--bg) 100%)}
+        .motive-inner{max-width:900px;margin:0 auto}
+        .motive-hero{text-align:center;margin-bottom:36px}
+        .motive-hero .big-num{font-size:72px;font-weight:800;color:var(--orange);line-height:1}
+        .motive-hero .big-unit{font-size:20px;color:var(--brown);font-weight:700}
+        .motive-hero .big-note{font-size:14px;color:var(--light);margin-top:4px}
+        .motive-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-bottom:32px}
+        .motive-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:26px 22px;box-shadow:0 2px 12px rgba(93,78,55,.05)}
+        .motive-card .m-ico{font-size:32px;margin-bottom:8px}
         .motive-card h4{font-size:16px;color:var(--brown);margin-bottom:8px}
         .motive-card p{font-size:13px;color:var(--mid);line-height:1.7}
+        .motive-card .m-highlight{color:var(--orange);font-weight:700}
+        .data-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+        .data-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 24px;text-align:center;flex:1;min-width:160px;box-shadow:0 2px 10px rgba(93,78,55,.04)}
+        .data-card .d-num{font-size:32px;font-weight:800;color:var(--orange)}
+        .data-card .d-label{font-size:12px;color:var(--light);margin-top:2px}
+        .data-card .d-note{font-size:11px;color:var(--light);margin-top:4px}
 
         /* --- CTA --- */
         .cta{text-align:center;padding:80px 20px;background:linear-gradient(180deg,var(--bg) 0%,var(--peach) 100%);position:relative;overflow:hidden}
@@ -227,8 +245,10 @@
             .stat{min-width:100px;padding:16px 12px}.stat-n{font-size:28px}
             .sec-title{font-size:24px}.ss-item img{width:190px}
             .feat-grid{grid-template-columns:1fr}
-            .exp-wrap,.parent-wrap{flex-direction:column;text-align:center}
-            .exp-wrap img,.parent-wrap>img{width:200px}
+            .exp-hero,.parent-wrap{flex-direction:column;text-align:center}
+            .exp-screens{justify-content:center}
+            .exp-screens img{width:150px}
+            .parent-wrap>img{width:200px}
             .safety{grid-template-columns:1fr}
             .b-char img{width:56px}
             .cta-chars img{width:50px}
@@ -398,14 +418,55 @@
 
 <!-- ===== EXPLANATION ===== -->
 <section class="exp-sec">
-    <div class="exp-wrap anim">
-        <img src="images/screenshot-explanation.png" alt="ポチ単の詳細解説画面" width="220" loading="lazy">
-        <div class="exp-text">
-            <h3>ただの単語帳じゃない。<br>全語に「絶対読む」解説付き</h3>
-            <p>579語すべてに、発音のコツ、よく出るフレーズ、間違い探し、並べ替え問題を収録。テストで「見たことあるけど思い出せない...」をなくします。</p>
-            <div class="exp-tags">
-                <span>発音ガイド</span><span>5級頻出フレーズ</span><span>間違い探し</span><span>並べ替え問題</span><span>カテゴリ別</span>
-            </div>
+    <h2 class="sec-title anim">579語すべてに「7ステップ解説」</h2>
+    <p class="sec-sub anim">ただの単語帳じゃない。1語1語を「使えるレベル」まで徹底解説</p>
+
+    <div class="exp-hero anim">
+        <div class="exp-screens">
+            <img src="images/screenshot-explanation.png" alt="ポチ単の詳細解説画面 - six の解説" width="190" loading="lazy">
+            <img src="images/screenshot-explanation2.jpg" alt="ポチ単の詳細解説画面 - body の解説" width="190" loading="lazy">
+        </div>
+        <div class="exp-intro">
+            <h3>「覚えた」で終わらない。<br>「テストで書ける・聞ける」まで到達</h3>
+            <p>ポチ単の解説は、1つの単語に対して7つのセクションで段階的に理解を深めます。発音→文法→頻出フレーズ→間違い訂正→並べ替え→関連語→会話練習。このサイクルで「なんとなく知ってる」を「確実に使える」に変えます。</p>
+        </div>
+    </div>
+
+    <div class="exp-structure anim">
+        <div class="exp-step">
+            <div class="exp-step-head"><div class="exp-step-num">1</div><div class="exp-step-title">&#x2705; 絶対読む</div></div>
+            <p>単語の意味・発音をわかりやすく解説。子どもが一人で読めるやさしい日本語で書かれています。</p>
+            <p class="ex">例: body（ボディ）＝「体」頭から足まで全部をまとめて言うよ。</p>
+        </div>
+        <div class="exp-step">
+            <div class="exp-step-head"><div class="exp-step-num">2</div><div class="exp-step-title">&#x2B50; 覚えよう！</div></div>
+            <p>その単語の文法ルール・使い方のコツを箇条書きで整理。複数形、冠詞、よくある組み合わせなど。</p>
+            <p class="ex">例: 数えられる名詞 → a body, bodies / my/your + body → my body</p>
+        </div>
+        <div class="exp-step">
+            <div class="exp-step-head"><div class="exp-step-num">3</div><div class="exp-step-title">&#x1F4D6; 5級に出るフレーズ</div></div>
+            <p>英検5級の過去問で実際に出た頻出フレーズを厳選。単語だけでなくフレーズごと覚えて得点力UP。</p>
+            <p class="ex">例: my body / a big body / a small body</p>
+        </div>
+        <div class="exp-step">
+            <div class="exp-step-head"><div class="exp-step-num">4</div><div class="exp-step-title">&#x274C; 間違い訂正</div></div>
+            <p>よくある間違い文を提示し、自分で正しい文に直す練習。タップで答えと解説が表示されます。</p>
+            <p class="ex">例: ❌ My body is bigs. → ⭕ My body is big.（形容詞にsはつかない）</p>
+        </div>
+        <div class="exp-step">
+            <div class="exp-step-head"><div class="exp-step-num">5</div><div class="exp-step-title">&#x1F500; 並べ替え問題</div></div>
+            <p>バラバラの英単語を正しい語順に並べ替える問題。英語の語順感覚が自然に身につきます。</p>
+            <p class="ex">例:【is】【body】【big】【my】→ My body is big.</p>
+        </div>
+        <div class="exp-step">
+            <div class="exp-step-head"><div class="exp-step-num">6</div><div class="exp-step-title">&#x1F680; ステップアップ</div></div>
+            <p>関連する単語や発展的な語彙を紹介。次に覚えるべき単語への橋渡しになります。</p>
+            <p class="ex">例: body parts（体のパーツ）・whole body（全身）</p>
+        </div>
+        <div class="exp-step">
+            <div class="exp-step-head"><div class="exp-step-num">7</div><div class="exp-step-title">&#x1F4AC; 会話で覚えよう</div></div>
+            <p>実際の会話形式で使い方を体感。英検のリスニングやスピーキングテストの対策にも直結します。</p>
+            <p class="ex">例: 👦 What animal do you like? → 👧 I like dogs.</p>
         </div>
     </div>
 </section>
@@ -435,23 +496,73 @@
 
 <!-- ===== WHY EIKEN ===== -->
 <section class="motive-sec">
-    <h2 class="sec-title anim">なぜ今、英検5級なの？</h2>
-    <p class="sec-sub anim">小学生のうちに英検を取るメリット</p>
-    <div class="motive-cards anim">
-        <div class="motive-card">
-            <div class="m-ico">&#x1F393;</div>
-            <h4>中学受験で有利に</h4>
-            <p>英検取得を加点対象とする中学校が増えています。5級は最初の一歩として最適です。</p>
+    <div class="motive-inner">
+        <h2 class="sec-title anim">なぜ今、英検5級なの？</h2>
+        <p class="sec-sub anim">データで見る英検5級の価値</p>
+
+        <div class="motive-hero anim">
+            <div class="big-num">80<span class="big-unit">%以上</span></div>
+            <div class="big-note">英検5級の合格率（日本英語検定協会 2015年度実績 81.4%）</div>
         </div>
-        <div class="motive-card">
-            <div class="m-ico">&#x1F4AA;</div>
-            <h4>中学英語に自信がつく</h4>
-            <p>英検5級は中学1年レベル。先取りで学んでおけば、中学の授業に余裕を持って臨めます。</p>
+
+        <div class="data-row anim">
+            <div class="data-card">
+                <div class="d-num">419</div>
+                <div class="d-label">合格基準スコア</div>
+                <div class="d-note">850点満点中</div>
+            </div>
+            <div class="data-card">
+                <div class="d-num">~60<span style="font-size:18px">%</span></div>
+                <div class="d-label">正答率の目安</div>
+                <div class="d-note">各技能6割程度で合格圏</div>
+            </div>
+            <div class="data-card">
+                <div class="d-num">579</div>
+                <div class="d-label">ポチ単の収録語数</div>
+                <div class="d-note">5級出題範囲を完全カバー</div>
+            </div>
+            <div class="data-card">
+                <div class="d-num">20~30<span style="font-size:14px">h</span></div>
+                <div class="d-label">目安の学習時間</div>
+                <div class="d-note">ゼロから始める場合</div>
+            </div>
         </div>
-        <div class="motive-card">
-            <div class="m-ico">&#x1F31F;</div>
-            <h4>成功体験が次の挑戦へ</h4>
-            <p>「合格した！」という体験がお子さまの自信になり、4級、3級へのステップアップにつながります。</p>
+
+        <div class="motive-grid anim" style="margin-top:32px">
+            <div class="motive-card">
+                <div class="m-ico">&#x1F393;</div>
+                <h4>中学受験で加点される</h4>
+                <p>英検取得を<span class="m-highlight">内申点の加点対象</span>とする中学校が年々増加中。5級は受験資格不要で誰でも挑戦でき、最初の実績づくりに最適です。</p>
+            </div>
+            <div class="motive-card">
+                <div class="m-ico">&#x1F4AA;</div>
+                <h4>中学英語を先取りできる</h4>
+                <p>英検5級は<span class="m-highlight">中学1年レベル</span>。小学生のうちに合格しておけば、中学の授業に余裕を持って臨めます。リスニング力が高い小学生は特に有利。</p>
+            </div>
+            <div class="motive-card">
+                <div class="m-ico">&#x1F31F;</div>
+                <h4>「合格」が自信になる</h4>
+                <p>合格率80%以上の試験だから、しっかり準備すれば<span class="m-highlight">ほぼ確実に合格</span>できます。「合格した！」という成功体験が4級→3級へのステップアップにつながります。</p>
+            </div>
+            <div class="motive-card">
+                <div class="m-ico">&#x1F3AE;</div>
+                <h4>ポチ単なら毎日続く</h4>
+                <p>ゲーム12種で飽きない設計。<span class="m-highlight">1日10分、2~3ヶ月</span>で全579語をカバー可能。SRS復習で覚えた単語を忘れない仕組みだから、本番で実力が出せます。</p>
+            </div>
+            <div class="motive-card">
+                <div class="m-ico">&#x1F4D0;</div>
+                <h4>リスニングも対策できる</h4>
+                <p>英検5級はリーディングとリスニングの2技能で判定。ポチ単は<span class="m-highlight">ネイティブ音声</span>搭載で、小学生が得意なリスニング力をさらに伸ばせます。</p>
+            </div>
+            <div class="motive-card">
+                <div class="m-ico">&#x1F4B0;</div>
+                <h4>完全無料で対策できる</h4>
+                <p>参考書を買う必要なし。<span class="m-highlight">579語＋310短文＋全語解説</span>がすべて無料。広告もないので、お子さまだけで安心して使えます。</p>
+            </div>
+        </div>
+
+        <div class="mid-cta anim" style="margin-top:28px">
+            <a href="https://apps.apple.com/jp/app/id6757858287" target="_blank" rel="noopener" class="dl-btn"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ja-jp?size=250x83" alt="App Storeからダウンロード" height="48"></a>
         </div>
     </div>
 </section>
