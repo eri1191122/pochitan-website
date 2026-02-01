@@ -3,83 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>プライバシーポリシー - ポチ単</title>
+    <title>プライバシーポリシー - ポチ単 英検5級単語帳アプリ</title>
+    <meta name="description" content="ポチ単のプライバシーポリシーです。個人情報の取り扱いについて説明します。">
+    <link rel="icon" href="images/app-icon.png" type="image/png">
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.8;
-            color: #333;
-            background: #f9f9f9;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg-warm: #FFF8F0;
+            --bg-cream: #FFF3E4;
+            --primary-brown: #5D4E37;
+            --accent-orange: #E8A838;
+            --accent-green: #4CAF50;
+            --text-dark: #3C3226;
+            --text-mid: #6B5D4F;
+            --text-light: #9B8E80;
+            --card-bg: #FFFFFF;
+            --card-shadow: 0 4px 20px rgba(93, 78, 55, 0.1);
+            --border-warm: #EDE3D5;
         }
-        h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
-        h2 { color: #2980b9; margin-top: 30px; }
-        .app-name { color: #e74c3c; font-weight: bold; }
-        .updated { color: #7f8c8d; font-size: 14px; }
-        .contact { background: #ecf0f1; padding: 15px; border-radius: 8px; margin-top: 30px; }
-        ul { padding-left: 20px; }
-        li { margin: 10px 0; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', Roboto, sans-serif;
+            background: var(--bg-warm);
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+
+        nav {
+            background: var(--card-bg);
+            border-bottom: 1px solid var(--border-warm);
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--primary-brown);
+            font-weight: 700;
+            font-size: 16px;
+        }
+        .nav-brand img { width: 32px; height: 32px; border-radius: 8px; }
+        .nav-links { display: flex; gap: 20px; }
+        .nav-links a {
+            color: var(--text-mid);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent-orange); }
+
+        .page-hero {
+            background: linear-gradient(180deg, #FDEBD0 0%, var(--bg-warm) 100%);
+            text-align: center;
+            padding: 50px 20px 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        .page-hero h1 { font-size: 28px; color: var(--primary-brown); margin-bottom: 8px; position: relative; z-index: 2; }
+        .page-hero .updated { font-size: 13px; color: var(--text-light); position: relative; z-index: 2; }
+        .hero-char { position: absolute; pointer-events: none; z-index: 1; }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        @keyframes floatSlow { 0%, 100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(-8px) rotate(3deg); } }
+        .char-left { width: 70px; left: 8%; top: 20%; animation: float 4s ease-in-out infinite; }
+        .char-right { width: 60px; right: 8%; top: 25%; animation: floatSlow 5s ease-in-out infinite 0.5s; }
+
+        .content {
+            max-width: 740px;
+            margin: 0 auto;
+            padding: 40px 20px 60px;
+        }
+
+        .policy-section {
+            background: var(--card-bg);
+            border: 1px solid var(--border-warm);
+            border-radius: 14px;
+            padding: 28px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 8px rgba(93, 78, 55, 0.04);
+        }
+
+        .policy-section h2 {
+            font-size: 17px;
+            color: var(--primary-brown);
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--bg-cream);
+        }
+
+        .policy-section p {
+            font-size: 14px;
+            color: var(--text-mid);
+            margin-bottom: 10px;
+        }
+        .policy-section p:last-child { margin-bottom: 0; }
+
+        .policy-section ul {
+            padding-left: 20px;
+            margin-top: 8px;
+        }
+        .policy-section ul li {
+            font-size: 14px;
+            color: var(--text-mid);
+            margin: 6px 0;
+        }
+        .policy-section ul li strong {
+            color: var(--text-dark);
+        }
+
+        .highlight-box {
+            background: #F0FAF0;
+            border: 1px solid #C8E6C9;
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin-top: 12px;
+            font-size: 14px;
+            color: #2E7D32;
+        }
+
+        .contact-section {
+            background: var(--primary-brown);
+            color: white;
+            border-radius: 14px;
+            padding: 28px;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        .contact-section h2 {
+            font-size: 17px;
+            margin-bottom: 12px;
+            border: none;
+            padding: 0;
+            color: white;
+        }
+        .contact-section p { color: rgba(255,255,255,0.8); font-size: 14px; }
+        .contact-section a { color: var(--accent-orange); text-decoration: none; font-weight: 600; }
+        .contact-section a:hover { text-decoration: underline; }
+
+        footer {
+            background: var(--primary-brown);
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+            padding: 30px 20px;
+        }
+        .footer-links { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 16px; }
+        .footer-links a { color: rgba(255, 255, 255, 0.8); text-decoration: none; font-size: 14px; transition: color 0.2s; }
+        .footer-links a:hover { color: white; }
+        footer small { font-size: 12px; color: rgba(255, 255, 255, 0.5); }
+
+        @media (max-width: 600px) {
+            .page-hero h1 { font-size: 24px; }
+            .nav-links { gap: 12px; }
+            .nav-links a { font-size: 13px; }
+            .policy-section { padding: 22px 18px; }
+        }
     </style>
 </head>
 <body>
-    <h1>プライバシーポリシー</h1>
-    <p class="updated">最終更新日: 2026年1月23日</p>
 
-    <p><span class="app-name">ポチ単 英検五級単語帳</span>（以下「本アプリ」）は、ユーザーのプライバシーを尊重し、個人情報の保護に努めています。本プライバシーポリシーでは、本アプリにおける情報の取り扱いについて説明します。</p>
+    <nav>
+        <a href="index.html" class="nav-brand">
+            <img src="images/app-icon.png" alt="ポチ単">
+            ポチ単
+        </a>
+        <div class="nav-links">
+            <a href="index.html">ホーム</a>
+            <a href="support.html">サポート</a>
+            <a href="privacy-policy.html" class="active">プライバシー</a>
+            <a href="terms-of-service.html">利用規約</a>
+        </div>
+    </nav>
 
-    <h2>1. 収集する情報</h2>
-    <p>本アプリは、以下の情報をお使いのデバイス内にのみ保存します。これらの情報は外部サーバーに送信されることはありません。</p>
-    <ul>
-        <li><strong>学習進捗データ</strong>: 学習した単語、正解/不正解の記録、学習日時</li>
-        <li><strong>設定情報</strong>: 音量設定、目標設定などのアプリ設定</li>
-        <li><strong>達成記録</strong>: バッジ、コインなどのゲーム内実績</li>
-    </ul>
+    <section class="page-hero">
+        <img src="images/pochitan-tanuki.png" alt="" class="hero-char char-left" width="70" loading="lazy">
+        <img src="images/pochitan-dog.png" alt="" class="hero-char char-right" width="60" loading="lazy">
+        <h1>プライバシーポリシー</h1>
+        <p class="updated">最終更新日: 2026年1月23日</p>
+    </section>
 
-    <h2>2. 情報の利用目的</h2>
-    <p>保存される情報は、以下の目的でのみ利用されます。</p>
-    <ul>
-        <li>学習進捗の表示と管理</li>
-        <li>SRS（間隔反復システム）による最適な復習タイミングの計算</li>
-        <li>学習目標の達成状況の表示</li>
-        <li>ユーザー設定の保持</li>
-    </ul>
+    <div class="content">
 
-    <h2>3. 第三者への提供</h2>
-    <p>本アプリは、ユーザーの個人情報を第三者に提供、販売、貸与することはありません。</p>
+        <div class="policy-section">
+            <p><strong>ポチ単 英検五級単語帳</strong>（以下「本アプリ」）は、ユーザーのプライバシーを尊重し、個人情報の保護に努めています。本プライバシーポリシーでは、本アプリにおける情報の取り扱いについて説明します。</p>
+            <div class="highlight-box">本アプリは、個人情報の収集・外部送信を一切行いません。広告・トラッキングもありません。</div>
+        </div>
 
-    <h2>4. 外部サービスとの通信</h2>
-    <p>本アプリは、以下の目的で外部サービスと通信する場合があります。</p>
-    <ul>
-        <li><strong>ネットワーク接続確認</strong>: オフライン/オンライン状態の検出のため、Googleの接続確認エンドポイントにアクセスする場合があります。この通信ではユーザーデータは送信されません。</li>
-    </ul>
+        <div class="policy-section">
+            <h2>1. 収集する情報</h2>
+            <p>本アプリは、以下の情報をお使いのデバイス内にのみ保存します。これらの情報は外部サーバーに送信されることはありません。</p>
+            <ul>
+                <li><strong>学習進捗データ</strong>: 学習した単語、正解/不正解の記録、学習日時</li>
+                <li><strong>設定情報</strong>: 音量設定、目標設定などのアプリ設定</li>
+                <li><strong>達成記録</strong>: バッジ、コインなどのゲーム内実績</li>
+            </ul>
+        </div>
 
-    <h2>5. データの保存と削除</h2>
-    <p>すべてのデータはお使いのデバイス内にのみ保存されます。アプリを削除すると、すべてのデータが削除されます。また、アプリ内の設定画面から「学習データをリセット」することで、いつでもデータを削除できます。</p>
+        <div class="policy-section">
+            <h2>2. 情報の利用目的</h2>
+            <p>保存される情報は、以下の目的でのみ利用されます。</p>
+            <ul>
+                <li>学習進捗の表示と管理</li>
+                <li>SRS（間隔反復システム）による最適な復習タイミングの計算</li>
+                <li>学習目標の達成状況の表示</li>
+                <li>ユーザー設定の保持</li>
+            </ul>
+        </div>
 
-    <h2>6. 子供のプライバシー</h2>
-    <p>本アプリは主に小学生〜中学生を対象としていますが、個人を特定できる情報を収集することはありません。保護者の方は、お子様の学習進捗をアプリ内の「保護者ダッシュボード」機能で確認できます。</p>
+        <div class="policy-section">
+            <h2>3. 第三者への提供</h2>
+            <p>本アプリは、ユーザーの個人情報を第三者に提供、販売、貸与することはありません。</p>
+        </div>
 
-    <h2>7. セキュリティ</h2>
-    <p>本アプリはユーザーデータをデバイス内にのみ保存し、外部への送信を行わないため、データ漏洩のリスクを最小限に抑えています。</p>
+        <div class="policy-section">
+            <h2>4. 外部サービスとの通信</h2>
+            <p>本アプリは、以下の目的で外部サービスと通信する場合があります。</p>
+            <ul>
+                <li><strong>ネットワーク接続確認</strong>: オフライン/オンライン状態の検出のため、Googleの接続確認エンドポイントにアクセスする場合があります。この通信ではユーザーデータは送信されません。</li>
+            </ul>
+        </div>
 
-    <h2>8. プライバシーポリシーの変更</h2>
-    <p>本プライバシーポリシーは、必要に応じて変更されることがあります。重要な変更がある場合は、アプリ内でお知らせします。</p>
+        <div class="policy-section">
+            <h2>5. データの保存と削除</h2>
+            <p>すべてのデータはお使いのデバイス内にのみ保存されます。アプリを削除すると、すべてのデータが削除されます。また、アプリ内の設定画面から「学習データをリセット」することで、いつでもデータを削除できます。</p>
+        </div>
 
-    <h2>9. 広告・トラッキング</h2>
-    <p>本アプリには広告は表示されません。また、トラッキングツールやアナリティクスツールは使用していません。</p>
+        <div class="policy-section">
+            <h2>6. 子供のプライバシー</h2>
+            <p>本アプリは主に小学生〜中学生を対象としていますが、個人を特定できる情報を収集することはありません。保護者の方は、お子様の学習進捗をアプリ内の「保護者ダッシュボード」機能で確認できます。</p>
+        </div>
 
-    <div class="contact">
-        <h2>10. お問い合わせ</h2>
-        <p>本プライバシーポリシーに関するご質問やお問い合わせは、以下までご連絡ください。</p>
-        <p><strong>メールアドレス</strong>: pochiroku.app@gmail.com</p>
-        <p><strong>開発者</strong>: Eri Ito</p>
+        <div class="policy-section">
+            <h2>7. セキュリティ</h2>
+            <p>本アプリはユーザーデータをデバイス内にのみ保存し、外部への送信を行わないため、データ漏洩のリスクを最小限に抑えています。</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>8. 広告・トラッキング</h2>
+            <p>本アプリには広告は表示されません。また、トラッキングツールやアナリティクスツールは使用していません。</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>9. プライバシーポリシーの変更</h2>
+            <p>本プライバシーポリシーは、必要に応じて変更されることがあります。重要な変更がある場合は、アプリ内でお知らせします。</p>
+        </div>
+
+        <div class="contact-section">
+            <h2>10. お問い合わせ</h2>
+            <p>本プライバシーポリシーに関するご質問やお問い合わせは、以下までご連絡ください。</p>
+            <p style="margin-top: 12px;"><a href="mailto:pochiroku.app@gmail.com">pochiroku.app@gmail.com</a></p>
+            <p style="margin-top: 4px;">開発者: Eri Ito</p>
+        </div>
+
     </div>
 
-    <hr style="margin-top: 40px;">
-    <p style="text-align: center; color: #7f8c8d; font-size: 14px;">
-        &copy; 2026 ポチ単 - All Rights Reserved
-    </p>
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">ホーム</a>
+            <a href="support.html">サポート</a>
+            <a href="terms-of-service.html">利用規約</a>
+        </div>
+        <small>&copy; 2026 Eri Ito. All Rights Reserved.</small>
+    </footer>
+
 </body>
 </html>

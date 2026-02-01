@@ -3,89 +3,279 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>利用規約 - ポチ単</title>
+    <title>利用規約 - ポチ単 英検5級単語帳アプリ</title>
+    <meta name="description" content="ポチ単の利用規約です。アプリの利用条件について説明します。">
+    <link rel="icon" href="images/app-icon.png" type="image/png">
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.8;
-            color: #333;
-            background: #f9f9f9;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg-warm: #FFF8F0;
+            --bg-cream: #FFF3E4;
+            --primary-brown: #5D4E37;
+            --accent-orange: #E8A838;
+            --accent-green: #4CAF50;
+            --text-dark: #3C3226;
+            --text-mid: #6B5D4F;
+            --text-light: #9B8E80;
+            --card-bg: #FFFFFF;
+            --card-shadow: 0 4px 20px rgba(93, 78, 55, 0.1);
+            --border-warm: #EDE3D5;
         }
-        h1 { color: #2c3e50; border-bottom: 3px solid #27ae60; padding-bottom: 10px; }
-        h2 { color: #27ae60; margin-top: 30px; }
-        .app-name { color: #e74c3c; font-weight: bold; }
-        .updated { color: #7f8c8d; font-size: 14px; }
-        .contact { background: #ecf0f1; padding: 15px; border-radius: 8px; margin-top: 30px; }
-        ul { padding-left: 20px; }
-        li { margin: 10px 0; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', Roboto, sans-serif;
+            background: var(--bg-warm);
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+
+        nav {
+            background: var(--card-bg);
+            border-bottom: 1px solid var(--border-warm);
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--primary-brown);
+            font-weight: 700;
+            font-size: 16px;
+        }
+        .nav-brand img { width: 32px; height: 32px; border-radius: 8px; }
+        .nav-links { display: flex; gap: 20px; }
+        .nav-links a {
+            color: var(--text-mid);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent-orange); }
+
+        .page-hero {
+            background: linear-gradient(180deg, #FDEBD0 0%, var(--bg-warm) 100%);
+            text-align: center;
+            padding: 50px 20px 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        .page-hero h1 { font-size: 28px; color: var(--primary-brown); margin-bottom: 8px; position: relative; z-index: 2; }
+        .page-hero .updated { font-size: 13px; color: var(--text-light); position: relative; z-index: 2; }
+        .hero-char { position: absolute; pointer-events: none; z-index: 1; }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        @keyframes floatSlow { 0%, 100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(-8px) rotate(3deg); } }
+        .char-left { width: 70px; left: 8%; top: 20%; animation: float 4s ease-in-out infinite; }
+        .char-right { width: 60px; right: 8%; top: 25%; animation: floatSlow 5s ease-in-out infinite 0.5s; }
+
+        .content {
+            max-width: 740px;
+            margin: 0 auto;
+            padding: 40px 20px 60px;
+        }
+
+        .terms-intro {
+            background: var(--card-bg);
+            border: 1px solid var(--border-warm);
+            border-radius: 14px;
+            padding: 28px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 8px rgba(93, 78, 55, 0.04);
+        }
+        .terms-intro p {
+            font-size: 14px;
+            color: var(--text-mid);
+        }
+
+        .terms-section {
+            background: var(--card-bg);
+            border: 1px solid var(--border-warm);
+            border-radius: 14px;
+            padding: 28px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 8px rgba(93, 78, 55, 0.04);
+        }
+
+        .terms-section h2 {
+            font-size: 17px;
+            color: var(--primary-brown);
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--bg-cream);
+        }
+
+        .terms-section p {
+            font-size: 14px;
+            color: var(--text-mid);
+            margin-bottom: 10px;
+        }
+        .terms-section p:last-child { margin-bottom: 0; }
+
+        .terms-section ul {
+            padding-left: 20px;
+            margin-top: 8px;
+        }
+        .terms-section ul li {
+            font-size: 14px;
+            color: var(--text-mid);
+            margin: 6px 0;
+        }
+
+        .contact-section {
+            background: var(--primary-brown);
+            color: white;
+            border-radius: 14px;
+            padding: 28px;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        .contact-section h2 {
+            font-size: 17px;
+            margin-bottom: 12px;
+            border: none;
+            padding: 0;
+            color: white;
+        }
+        .contact-section p { color: rgba(255,255,255,0.8); font-size: 14px; }
+        .contact-section a { color: var(--accent-orange); text-decoration: none; font-weight: 600; }
+        .contact-section a:hover { text-decoration: underline; }
+
+        footer {
+            background: var(--primary-brown);
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+            padding: 30px 20px;
+        }
+        .footer-links { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 16px; }
+        .footer-links a { color: rgba(255, 255, 255, 0.8); text-decoration: none; font-size: 14px; transition: color 0.2s; }
+        .footer-links a:hover { color: white; }
+        footer small { font-size: 12px; color: rgba(255, 255, 255, 0.5); }
+
+        @media (max-width: 600px) {
+            .page-hero h1 { font-size: 24px; }
+            .nav-links { gap: 12px; }
+            .nav-links a { font-size: 13px; }
+            .terms-section { padding: 22px 18px; }
+        }
     </style>
 </head>
 <body>
-    <h1>利用規約</h1>
-    <p class="updated">最終更新日: 2026年1月23日</p>
 
-    <p>この利用規約（以下「本規約」）は、<span class="app-name">ポチ単 英検五級単語帳</span>（以下「本アプリ」）の利用条件を定めるものです。ユーザーの皆様には、本規約に同意いただいた上で、本アプリをご利用いただきます。</p>
+    <nav>
+        <a href="index.html" class="nav-brand">
+            <img src="images/app-icon.png" alt="ポチ単">
+            ポチ単
+        </a>
+        <div class="nav-links">
+            <a href="index.html">ホーム</a>
+            <a href="support.html">サポート</a>
+            <a href="privacy-policy.html">プライバシー</a>
+            <a href="terms-of-service.html" class="active">利用規約</a>
+        </div>
+    </nav>
 
-    <h2>第1条（適用）</h2>
-    <p>本規約は、ユーザーと開発者との間の本アプリの利用に関わる一切の関係に適用されます。</p>
+    <section class="page-hero">
+        <img src="images/pochitan-cat.png" alt="" class="hero-char char-left" width="70" loading="lazy">
+        <img src="images/pochitan-tanuki.png" alt="" class="hero-char char-right" width="60" loading="lazy">
+        <h1>利用規約</h1>
+        <p class="updated">最終更新日: 2026年1月23日</p>
+    </section>
 
-    <h2>第2条（利用条件）</h2>
-    <p>本アプリは、以下の条件のもとで無料でご利用いただけます。</p>
-    <ul>
-        <li>個人の学習目的での使用</li>
-        <li>非商用目的での使用</li>
-    </ul>
+    <div class="content">
 
-    <h2>第3条（禁止事項）</h2>
-    <p>ユーザーは、本アプリの利用にあたり、以下の行為をしてはなりません。</p>
-    <ul>
-        <li>法令または公序良俗に違反する行為</li>
-        <li>本アプリの運営を妨害する行為</li>
-        <li>本アプリのリバースエンジニアリング、逆コンパイル、逆アセンブル</li>
-        <li>本アプリのコンテンツを無断で複製、転載、配布する行為</li>
-        <li>その他、開発者が不適切と判断する行為</li>
-    </ul>
+        <div class="terms-intro">
+            <p>この利用規約（以下「本規約」）は、<strong>ポチ単 英検五級単語帳</strong>（以下「本アプリ」）の利用条件を定めるものです。ユーザーの皆様には、本規約に同意いただいた上で、本アプリをご利用いただきます。</p>
+        </div>
 
-    <h2>第4条（本アプリの提供の停止等）</h2>
-    <p>開発者は、以下のいずれかの事由があると判断した場合、ユーザーに事前に通知することなく本アプリの全部または一部の提供を停止または中断することができるものとします。</p>
-    <ul>
-        <li>本アプリにかかるコンピュータシステムの保守点検または更新を行う場合</li>
-        <li>地震、落雷、火災、停電または天災などの不可抗力により、本アプリの提供が困難となった場合</li>
-        <li>その他、開発者が本アプリの提供が困難と判断した場合</li>
-    </ul>
+        <div class="terms-section">
+            <h2>第1条（適用）</h2>
+            <p>本規約は、ユーザーと開発者との間の本アプリの利用に関わる一切の関係に適用されます。</p>
+        </div>
 
-    <h2>第5条（知的財産権）</h2>
-    <p>本アプリに関する著作権、商標権その他の知的財産権は、開発者または正当な権利を有する第三者に帰属します。</p>
+        <div class="terms-section">
+            <h2>第2条（利用条件）</h2>
+            <p>本アプリは、以下の条件のもとで無料でご利用いただけます。</p>
+            <ul>
+                <li>個人の学習目的での使用</li>
+                <li>非商用目的での使用</li>
+            </ul>
+        </div>
 
-    <h2>第6条（免責事項）</h2>
-    <ul>
-        <li>開発者は、本アプリに事実上または法律上の瑕疵（安全性、信頼性、正確性、完全性、有効性、特定の目的への適合性、セキュリティなどに関する欠陥、エラーやバグ、権利侵害などを含みます。）がないことを明示的にも黙示的にも保証しておりません。</li>
-        <li>開発者は、本アプリによってユーザーに生じたあらゆる損害について、一切の責任を負いません。</li>
-        <li>本アプリは学習支援を目的としており、英検の合格を保証するものではありません。</li>
-    </ul>
+        <div class="terms-section">
+            <h2>第3条（禁止事項）</h2>
+            <p>ユーザーは、本アプリの利用にあたり、以下の行為をしてはなりません。</p>
+            <ul>
+                <li>法令または公序良俗に違反する行為</li>
+                <li>本アプリの運営を妨害する行為</li>
+                <li>本アプリのリバースエンジニアリング、逆コンパイル、逆アセンブル</li>
+                <li>本アプリのコンテンツを無断で複製、転載、配布する行為</li>
+                <li>その他、開発者が不適切と判断する行為</li>
+            </ul>
+        </div>
 
-    <h2>第7条（サービス内容の変更等）</h2>
-    <p>開発者は、ユーザーに通知することなく、本アプリの内容を変更または本アプリの提供を中止することができるものとし、これによってユーザーに生じた損害について一切の責任を負いません。</p>
+        <div class="terms-section">
+            <h2>第4条（本アプリの提供の停止等）</h2>
+            <p>開発者は、以下のいずれかの事由があると判断した場合、ユーザーに事前に通知することなく本アプリの全部または一部の提供を停止または中断することができるものとします。</p>
+            <ul>
+                <li>本アプリにかかるコンピュータシステムの保守点検または更新を行う場合</li>
+                <li>地震、落雷、火災、停電または天災などの不可抗力により、本アプリの提供が困難となった場合</li>
+                <li>その他、開発者が本アプリの提供が困難と判断した場合</li>
+            </ul>
+        </div>
 
-    <h2>第8条（利用規約の変更）</h2>
-    <p>開発者は、必要と判断した場合には、ユーザーに通知することなくいつでも本規約を変更することができるものとします。変更後の利用規約は、本アプリ内に表示した時点から効力を生じるものとします。</p>
+        <div class="terms-section">
+            <h2>第5条（知的財産権）</h2>
+            <p>本アプリに関する著作権、商標権その他の知的財産権は、開発者または正当な権利を有する第三者に帰属します。</p>
+        </div>
 
-    <h2>第9条（準拠法・裁判管轄）</h2>
-    <p>本規約の解釈にあたっては、日本法を準拠法とします。本アプリに関して紛争が生じた場合には、開発者の所在地を管轄する裁判所を専属的合意管轄とします。</p>
+        <div class="terms-section">
+            <h2>第6条（免責事項）</h2>
+            <ul>
+                <li>開発者は、本アプリに事実上または法律上の瑕疵（安全性、信頼性、正確性、完全性、有効性、特定の目的への適合性、セキュリティなどに関する欠陥、エラーやバグ、権利侵害などを含みます。）がないことを明示的にも黙示的にも保証しておりません。</li>
+                <li>開発者は、本アプリによってユーザーに生じたあらゆる損害について、一切の責任を負いません。</li>
+                <li>本アプリは学習支援を目的としており、英検の合格を保証するものではありません。</li>
+            </ul>
+        </div>
 
-    <div class="contact">
-        <h2>お問い合わせ</h2>
-        <p>本規約に関するご質問やお問い合わせは、以下までご連絡ください。</p>
-        <p><strong>メールアドレス</strong>: pochiroku.app@gmail.com</p>
-        <p><strong>開発者</strong>: Eri Ito</p>
+        <div class="terms-section">
+            <h2>第7条（サービス内容の変更等）</h2>
+            <p>開発者は、ユーザーに通知することなく、本アプリの内容を変更または本アプリの提供を中止することができるものとし、これによってユーザーに生じた損害について一切の責任を負いません。</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>第8条（利用規約の変更）</h2>
+            <p>開発者は、必要と判断した場合には、ユーザーに通知することなくいつでも本規約を変更することができるものとします。変更後の利用規約は、本アプリ内に表示した時点から効力を生じるものとします。</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>第9条（準拠法・裁判管轄）</h2>
+            <p>本規約の解釈にあたっては、日本法を準拠法とします。本アプリに関して紛争が生じた場合には、開発者の所在地を管轄する裁判所を専属的合意管轄とします。</p>
+        </div>
+
+        <div class="contact-section">
+            <h2>お問い合わせ</h2>
+            <p>本規約に関するご質問やお問い合わせは、以下までご連絡ください。</p>
+            <p style="margin-top: 12px;"><a href="mailto:pochiroku.app@gmail.com">pochiroku.app@gmail.com</a></p>
+            <p style="margin-top: 4px;">開発者: Eri Ito</p>
+        </div>
+
     </div>
 
-    <hr style="margin-top: 40px;">
-    <p style="text-align: center; color: #7f8c8d; font-size: 14px;">
-        &copy; 2026 ポチ単 - All Rights Reserved
-    </p>
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">ホーム</a>
+            <a href="support.html">サポート</a>
+            <a href="privacy-policy.html">プライバシーポリシー</a>
+        </div>
+        <small>&copy; 2026 Eri Ito. All Rights Reserved.</small>
+    </footer>
+
 </body>
 </html>
